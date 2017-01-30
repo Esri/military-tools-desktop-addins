@@ -65,6 +65,11 @@ Military Tools for ArcGIS is a collection of mission-focused enhancements to sim
 +---visibility-addin-dotnet
 ```
 
+* A clone [script has been provided](./source/Utilities/CloneDependentRepos.bat) to automate the cloning of these repos. To use:
+	* Open a Git shell/command prompt 
+	* `cd military-tools-desktop-addins\source\Utilities`
+	* `CloneDependentRepos.bat`
+
 #### Building
 
 * To Build Using Visual Studio
