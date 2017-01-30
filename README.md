@@ -47,19 +47,23 @@ Military Tools for ArcGIS is a collection of mission-focused enhancements to sim
 
 #### Obtain the Dependent Repositories
 
+* Clone this repository
 * Clone each of the following repositories *to the same folder location* 
 	* [coordinate-conversion-addin-dotnet](https://github.com/Esri/coordinate-conversion-addin-dotnet)
 	* [distance-direction-addin-dotnet](https://github.com/Esri/distance-direction-addin-dotnet)
 	* [military-symbol-editor-addin-wpf](https://github.com/Esri/military-symbol-editor-addin-wpf)
 	* [visibility-addin-dotnet](https://github.com/Esri/visibility-addin-dotnet)
 * Your local folder structure should now look like:
-> {Github Clone Location}
-> +---military-tools-desktop-addins
-> +---coordinate-conversion-addin-dotnet
-> +---distance-direction-addin-dotnet
-> +---military-symbol-editor-addin-wpf
-> +---military-tools-geoprocessing-toolbox
-> +---visibility-addin-dotnet
+
+```
+{Github Clone Location}
++---military-tools-desktop-addins
++---coordinate-conversion-addin-dotnet
++---distance-direction-addin-dotnet
++---military-symbol-editor-addin-wpf
++---military-tools-geoprocessing-toolbox
++---visibility-addin-dotnet
+```
 
 #### Building
 
@@ -75,6 +79,17 @@ Military Tools for ArcGIS is a collection of mission-focused enhancements to sim
 	* ArcMap Add-in
 		* ``` cd military-tools-desktop-addins\source\MilitaryToolsForArcMap ```
 		* ``` msbuild MilitaryToolsForArcMap.sln /property:Configuration=Release ```
+
+#### Running
+
+* ArcGIS Pro Add-in
+	* Double-click to install the build add-in file: 
+	* `military-tools-desktop-addins\source\MilitaryToolsForArcGISPro\bin\Release\MilitaryToolsforArcGISPro.esriAddinX`
+	* Run ArcGIS Pro and use the tools on the Military Tools tab
+* ArcMap Add-in
+	* Double-click to install the build add-in file: 
+	* `military-tools-desktop-addins\source\MilitaryToolsForArcMap\bin\Release\MilitaryToolsforArcMap.esriAddIn`
+	* Run ArcMap and enable the Military Tools toolbar
 
 ## Resources
 
