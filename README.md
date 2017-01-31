@@ -7,10 +7,10 @@ Military Tools for ArcGIS is a collection of mission-focused enhancements to sim
 ## Features
 
 * ArcMap Toolbar and ArcGIS Pro Tab for the set of Military Tools for ArcGIS
-	* Coordinate Conversion
-	* Distance and Direction
-	* Military Symbol Editor (ArcGIS Pro only)
-	* Visibility
+	* [Coordinate Conversion](https://github.com/Esri/coordinate-conversion-addin-dotnet)
+	* [Distance and Direction](https://github.com/Esri/distance-direction-addin-dotnet)
+	* [Military Symbol Editor](https://github.com/Esri/military-symbol-editor-addin-wpf) (ArcGIS Pro Only)
+	* [Visibility](https://github.com/Esri/visibility-addin-dotnet)
 * Addin for ArcMap 10.3.1+
 * Addin for ArcGIS Pro 1.4+ 
 
@@ -48,7 +48,7 @@ Military Tools for ArcGIS is a collection of mission-focused enhancements to sim
 #### Obtain the Dependent Repositories
 
 * Clone this repository
-* Clone each of the following repositories *to the same folder location* 
+* Clone each of the following component repositories *to the same folder location* 
 	* [coordinate-conversion-addin-dotnet](https://github.com/Esri/coordinate-conversion-addin-dotnet)
 	* [distance-direction-addin-dotnet](https://github.com/Esri/distance-direction-addin-dotnet)
 	* [military-symbol-editor-addin-wpf](https://github.com/Esri/military-symbol-editor-addin-wpf)
@@ -95,6 +95,10 @@ Military Tools for ArcGIS is a collection of mission-focused enhancements to sim
 	* Double-click to install the build add-in file: 
 	* `military-tools-desktop-addins\source\MilitaryToolsForArcMap\bin\Release\MilitaryToolsforArcMap.esriAddIn`
 	* Run ArcMap and enable the Military Tools toolbar
+
+#### More Information
+
+For more information, please consult the [wiki](https://github.com/Esri/military-tools-desktop-addins/wiki).
 
 ## Resources
 
