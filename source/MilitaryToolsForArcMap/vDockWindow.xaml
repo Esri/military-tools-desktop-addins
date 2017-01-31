@@ -1,0 +1,25 @@
+﻿<local:CCUserControlProxy   
+    x:Class="MilitaryTools.vDockWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:viewModels="clr-namespace:ArcMapAddinVisibility.ViewModels;assembly=Visibility"
+    xmlns:prop="clr-namespace:VisibilityLibrary.Properties;assembly=VisibilityLibrary"
+    xmlns:local="clr-namespace:ArcMapAddinVisibility;assembly=Visibility"
+    Height="300" Width="300">
+    <UserControl.Resources>
+        <viewModels:MainViewModel x:Key="viewModelMain" />
+    </UserControl.Resources>
+    <UserControl.DataContext>
+        <StaticResourceExtension ResourceKey="viewModelMain" />
+    </UserControl.DataContext>
+    <Grid Margin="3,3,3,3">
+        <TabControl SelectedItem="{Binding SelectedTab, Mode=OneWayToSource}">
+            <TabItem Header="{x:Static prop:Resources.LabelTabLLOS}" ToolTip="{x:Static prop:Resources.TooltipLLOSTab}">
+                <UserControl Content="{Binding LLOSView}" />
+            </TabItem>
+            <TabItem Header="{x:Static prop:Resources.LabelTabRLOS}" ToolTip="{x:Static prop:Resources.TooltipRLOSTab}">
+                <UserControl Content="{Binding RLOSView}" />
+            </TabItem>
+        </TabControl>
+    </Grid>
+</local:CCUserControlProxy>  

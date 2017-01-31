@@ -1,0 +1,31 @@
+﻿<local:CCUserControlProxy   
+    x:Class="MilitaryTools.ddDockWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:viewModels="clr-namespace:ArcMapAddinDistanceAndDirection.ViewModels;assembly=DistanceAndDirection"
+    xmlns:prop="clr-namespace:DistanceAndDirectionLibrary.Properties;assembly=DistanceAndDirectionLibrary"
+    xmlns:local="clr-namespace:ArcMapAddinDistanceAndDirection;assembly=DistanceAndDirection"
+    Height="300" Width="300">
+    <UserControl.Resources>
+        <viewModels:MainViewModel x:Key="viewModelMain" />
+    </UserControl.Resources>
+    <UserControl.DataContext>
+        <StaticResourceExtension ResourceKey="viewModelMain" />
+    </UserControl.DataContext>
+    <Grid Margin="3,3,3,3">
+        <TabControl SelectedItem="{Binding SelectedTab, Mode=OneWayToSource}">
+            <TabItem Header="{x:Static prop:Resources.LabelTabLines}">
+                <UserControl Content="{Binding LinesView}" />
+            </TabItem>
+            <TabItem Header="{x:Static prop:Resources.LabelTabCircle}">
+                <UserControl Content="{Binding CircleView}" />
+            </TabItem>
+            <TabItem Header="{x:Static prop:Resources.LabelTabEllipse}">
+                <UserControl Content="{Binding EllipseView}" />
+            </TabItem>
+            <TabItem Header="{x:Static prop:Resources.LabelTabRange}">
+                <UserControl Content="{Binding RangeView}" />
+            </TabItem>
+        </TabControl>
+    </Grid>
+</local:CCUserControlProxy>  
