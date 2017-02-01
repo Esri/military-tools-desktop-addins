@@ -98,7 +98,7 @@ Military Tools for ArcGIS is a collection of mission-focused enhancements to sim
 
 #### More Information
 
-For more information, please consult the [wiki](https://github.com/Esri/military-tools-desktop-addins/wiki).
+For more information, please consult the [wiki](https://github.com/Esri/military-tools-desktop-addins/wiki) or [landing page](https://esri.github.io/military-tools-desktop-addins).
 
 ## Resources
 
