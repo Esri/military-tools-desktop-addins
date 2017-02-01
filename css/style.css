@@ -450,7 +450,8 @@ body {
   float: left;
   position: relative;
   background-color: white;
-  z-index: 3; }
+  z-index: 3; 
+  border-radius: 5px; }
 
 /* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
 .tomorrow-comment, pre .comment, pre .title {
