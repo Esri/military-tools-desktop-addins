@@ -1,0 +1,65 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MilitaryToolsForArcMap", "MilitaryToolsForArcMap.csproj", "{C37767BB-18E6-4743-A5EC-1D7F2B38F487}"
+	ProjectSection(ProjectDependencies) = postProject
+		{D743CD02-174D-44CB-AE88-93C01D21F89E} = {D743CD02-174D-44CB-AE88-93C01D21F89E}
+		{A6297643-B920-4951-915F-046B266E023A} = {A6297643-B920-4951-915F-046B266E023A}
+		{E319BB7C-DE2F-44F2-8A0E-EBD4F9E110B7} = {E319BB7C-DE2F-44F2-8A0E-EBD4F9E110B7}
+		{67FFDFAE-F8EC-45AA-A3F9-6109BCF5BBF4} = {67FFDFAE-F8EC-45AA-A3F9-6109BCF5BBF4}
+		{23854FB8-98F1-443B-82FB-21718D39EF94} = {23854FB8-98F1-443B-82FB-21718D39EF94}
+		{6A10F7BD-36D5-4262-85D8-DCBDAD5F27EB} = {6A10F7BD-36D5-4262-85D8-DCBDAD5F27EB}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArcMapAddinCoordinateConversion", "..\..\..\coordinate-conversion-addin-dotnet\source\CoordinateConversion\ArcMapAddinCoordinateConversion\ArcMapAddinCoordinateConversion.csproj", "{A6297643-B920-4951-915F-046B266E023A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoordinateConversionLibrary", "..\..\..\coordinate-conversion-addin-dotnet\source\CoordinateConversion\CoordinateConversionLibrary\CoordinateConversionLibrary.csproj", "{67FFDFAE-F8EC-45AA-A3F9-6109BCF5BBF4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArcMapAddinDistanceAndDirection", "..\..\..\distance-direction-addin-dotnet\source\DistanceAndDirection\ArcMapAddinDistanceAndDirection\ArcMapAddinDistanceAndDirection\ArcMapAddinDistanceAndDirection.csproj", "{E319BB7C-DE2F-44F2-8A0E-EBD4F9E110B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DistanceAndDirectionLibrary", "..\..\..\distance-direction-addin-dotnet\source\DistanceAndDirection\DistanceAndDirectionLibrary\DistanceAndDirectionLibrary.csproj", "{23854FB8-98F1-443B-82FB-21718D39EF94}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArcMapAddinVisibility", "..\..\..\visibility-addin-dotnet\source\Visibility\ArcMapAddinVisibility\ArcMapAddinVisibility.csproj", "{6A10F7BD-36D5-4262-85D8-DCBDAD5F27EB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisibilityLibrary", "..\..\..\visibility-addin-dotnet\source\Visibility\VisibilityLibrary\VisibilityLibrary.csproj", "{D743CD02-174D-44CB-AE88-93C01D21F89E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C37767BB-18E6-4743-A5EC-1D7F2B38F487}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C37767BB-18E6-4743-A5EC-1D7F2B38F487}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C37767BB-18E6-4743-A5EC-1D7F2B38F487}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C37767BB-18E6-4743-A5EC-1D7F2B38F487}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6297643-B920-4951-915F-046B266E023A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6297643-B920-4951-915F-046B266E023A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6297643-B920-4951-915F-046B266E023A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6297643-B920-4951-915F-046B266E023A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67FFDFAE-F8EC-45AA-A3F9-6109BCF5BBF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67FFDFAE-F8EC-45AA-A3F9-6109BCF5BBF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67FFDFAE-F8EC-45AA-A3F9-6109BCF5BBF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67FFDFAE-F8EC-45AA-A3F9-6109BCF5BBF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E319BB7C-DE2F-44F2-8A0E-EBD4F9E110B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E319BB7C-DE2F-44F2-8A0E-EBD4F9E110B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E319BB7C-DE2F-44F2-8A0E-EBD4F9E110B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E319BB7C-DE2F-44F2-8A0E-EBD4F9E110B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23854FB8-98F1-443B-82FB-21718D39EF94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23854FB8-98F1-443B-82FB-21718D39EF94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23854FB8-98F1-443B-82FB-21718D39EF94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23854FB8-98F1-443B-82FB-21718D39EF94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A10F7BD-36D5-4262-85D8-DCBDAD5F27EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A10F7BD-36D5-4262-85D8-DCBDAD5F27EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A10F7BD-36D5-4262-85D8-DCBDAD5F27EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A10F7BD-36D5-4262-85D8-DCBDAD5F27EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D743CD02-174D-44CB-AE88-93C01D21F89E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D743CD02-174D-44CB-AE88-93C01D21F89E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D743CD02-174D-44CB-AE88-93C01D21F89E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D743CD02-174D-44CB-AE88-93C01D21F89E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

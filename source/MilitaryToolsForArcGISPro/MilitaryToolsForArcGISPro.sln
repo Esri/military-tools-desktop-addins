@@ -1,0 +1,63 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MilitaryToolsForArcGISPro", "MilitaryToolsForArcGISPro.csproj", "{F13AA05B-70CC-4354-A174-E0BDE382F971}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProAppCoordConversionModule", "..\..\..\coordinate-conversion-addin-dotnet\source\CoordinateConversion\ProAppCoordConversionModule\ProAppCoordConversionModule.csproj", "{D91D391E-03A3-4376-8BBB-EAF6F0DA1EBF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoordinateConversionLibrary", "..\..\..\coordinate-conversion-addin-dotnet\source\CoordinateConversion\CoordinateConversionLibrary\CoordinateConversionLibrary.csproj", "{67FFDFAE-F8EC-45AA-A3F9-6109BCF5BBF4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProAppDistanceAndDirectionModule", "..\..\..\distance-direction-addin-dotnet\source\DistanceAndDirection\ProAppDistanceAndDirectionModule\ProAppDistanceAndDirectionModule\ProAppDistanceAndDirectionModule.csproj", "{AB2934C1-011A-49FE-BD1C-9368CCE0358E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DistanceAndDirectionLibrary", "..\..\..\distance-direction-addin-dotnet\source\DistanceAndDirection\DistanceAndDirectionLibrary\DistanceAndDirectionLibrary.csproj", "{23854FB8-98F1-443B-82FB-21718D39EF94}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisibilityLibrary", "..\..\..\visibility-addin-dotnet\source\Visibility\VisibilityLibrary\VisibilityLibrary.csproj", "{D743CD02-174D-44CB-AE88-93C01D21F89E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProAppVisibilityModule", "..\..\..\visibility-addin-dotnet\source\Visibility\ProAppVisibilityModule\ProAppVisibilityModule.csproj", "{4DE1A8A8-BCA3-40C7-8929-041023F2D3E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProSymbolEditor", "..\..\..\military-symbol-editor-addin-wpf\source\ProSymbolEditor\ProSymbolEditor.csproj", "{4FF462B0-2910-47F3-B6FD-D1D17E5F7DFC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F13AA05B-70CC-4354-A174-E0BDE382F971}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F13AA05B-70CC-4354-A174-E0BDE382F971}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F13AA05B-70CC-4354-A174-E0BDE382F971}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F13AA05B-70CC-4354-A174-E0BDE382F971}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D91D391E-03A3-4376-8BBB-EAF6F0DA1EBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D91D391E-03A3-4376-8BBB-EAF6F0DA1EBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D91D391E-03A3-4376-8BBB-EAF6F0DA1EBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D91D391E-03A3-4376-8BBB-EAF6F0DA1EBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67FFDFAE-F8EC-45AA-A3F9-6109BCF5BBF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67FFDFAE-F8EC-45AA-A3F9-6109BCF5BBF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67FFDFAE-F8EC-45AA-A3F9-6109BCF5BBF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67FFDFAE-F8EC-45AA-A3F9-6109BCF5BBF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB2934C1-011A-49FE-BD1C-9368CCE0358E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB2934C1-011A-49FE-BD1C-9368CCE0358E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB2934C1-011A-49FE-BD1C-9368CCE0358E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB2934C1-011A-49FE-BD1C-9368CCE0358E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23854FB8-98F1-443B-82FB-21718D39EF94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23854FB8-98F1-443B-82FB-21718D39EF94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23854FB8-98F1-443B-82FB-21718D39EF94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23854FB8-98F1-443B-82FB-21718D39EF94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D743CD02-174D-44CB-AE88-93C01D21F89E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D743CD02-174D-44CB-AE88-93C01D21F89E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D743CD02-174D-44CB-AE88-93C01D21F89E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D743CD02-174D-44CB-AE88-93C01D21F89E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DE1A8A8-BCA3-40C7-8929-041023F2D3E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DE1A8A8-BCA3-40C7-8929-041023F2D3E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DE1A8A8-BCA3-40C7-8929-041023F2D3E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DE1A8A8-BCA3-40C7-8929-041023F2D3E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FF462B0-2910-47F3-B6FD-D1D17E5F7DFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FF462B0-2910-47F3-B6FD-D1D17E5F7DFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FF462B0-2910-47F3-B6FD-D1D17E5F7DFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FF462B0-2910-47F3-B6FD-D1D17E5F7DFC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
