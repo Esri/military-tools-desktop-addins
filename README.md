@@ -158,5 +158,5 @@ limitations under the License.
 
 A copy of the license is available in the repository's [LICENSE](./LICENSE) file.
 
-[](Esri Tags: ArcGIS ArcMap Toolbar Add-In Defense Military ArcObjects .NET WPF ArcGISSolutions ArcGIS-Solutions ArcGIS-Pro Add-In Military-Tools-for-ArcGIS)
-[](Esri Language: C#)​
+[](Esri Tags: ArcGIS, ArcMap, Toolbar, Add-In, Defense, Military, ArcObjects, .NET, WPF, ArcGISSolutions, ArcGIS-Solutions, ArcGIS-Pro, Military-Tools-for-ArcGIS)
+[](Esri Language: C-Sharp)​
