@@ -127,7 +127,7 @@
         </dockPane>
       </dockPanes>
     </insertModule>
-    <insertModule id="ProAppDistanceAndDirectionModule_Module" assembly="DistanceAndDirection.dll" className="ProAppDistanceAndDirectionModule.DistanceAndDirectionModule" autoLoad="false" caption="Distance And Direction">
+    <insertModule id="ProAppDistanceAndDirectionModule_Module" assembly="DistanceAndDirection.dll" className="ProAppDistanceAndDirectionModule.DistanceAndDirectionModule" autoLoad="false" caption="Distance and Direction">
       <!--defaultAssembly="DistanceAndDirection.dll" defaultNamespace="ProAppDistanceAndDirectionModule"-->
       <groups>
         <!-- comment this out if you have no controls on the Addin tab to avoid
@@ -156,7 +156,7 @@
         </tool>
       </controls>
       <dockPanes>
-        <dockPane id="ProAppDistanceAndDirectionModule_DistanceAndDirectionDockpane" caption="Distance And Direction" assembly="DistanceAndDirection.dll" className="ProAppDistanceAndDirectionModule.DistanceAndDirectionDockpaneViewModel" dock="group" dockWith="esri_core_contentsDockPane">
+        <dockPane id="ProAppDistanceAndDirectionModule_DistanceAndDirectionDockpane" caption="Distance and Direction" assembly="DistanceAndDirection.dll" className="ProAppDistanceAndDirectionModule.DistanceAndDirectionDockpaneViewModel" dock="group" dockWith="esri_core_contentsDockPane">
           <content assembly="DistanceAndDirection.dll" className="ProAppDistanceAndDirectionModule.DistanceAndDirectionDockpaneView" />
         </dockPane>
       </dockPanes>
