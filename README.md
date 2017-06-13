@@ -12,7 +12,7 @@ Military Tools for ArcGIS is a collection of mission-focused enhancements to sim
 	* [Military Symbol Editor](https://github.com/Esri/military-symbol-editor-addin-wpf) (ArcGIS Pro Only)
 	* [Visibility](https://github.com/Esri/visibility-addin-dotnet)
 * Addin for ArcMap 10.3.1+
-* Addin for ArcGIS Pro 1.4+ 
+* Addin for ArcGIS Pro 2.0+ 
 
 ## Sections
 
@@ -30,16 +30,16 @@ Military Tools for ArcGIS is a collection of mission-focused enhancements to sim
 * Visual Studio 2015
 * ArcGIS for Desktop 
 	* ArcMap 10.3.1+
-	* ArcGIS Pro 1.4+
+	* ArcGIS Pro 2.0+
 * ArcGIS Desktop SDK for .NET 10.3.1+
 	* [ArcGIS Desktop for .NET Requirements](https://desktop.arcgis.com/en/desktop/latest/get-started/system-requirements/arcobjects-sdk-system-requirements.htm)
-* [ArcGIS Pro SDK](http://pro.arcgis.com/en/pro-app/sdk/) 1.4+
+* [ArcGIS Pro SDK](http://pro.arcgis.com/en/pro-app/sdk/) 2.0+
 
 ### Run Requirements
 
 * ArcGIS for Desktop 
 	* ArcMap 10.3.1+
-	* ArcGIS Pro 1.4+
+	* ArcGIS Pro 2.0+
 
 ## Instructions
 
@@ -142,7 +142,7 @@ Esri welcomes contributions from anyone and everyone. Please see our [guidelines
 
 ## Licensing
 
-Copyright 2016 Esri
+Copyright 2016-2017 Esri
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -158,5 +158,3 @@ limitations under the License.
 
 A copy of the license is available in the repository's [LICENSE](./LICENSE) file.
 
-[](Esri Tags: ArcGIS, ArcMap, Toolbar, Add-In, Defense, Military, ArcObjects, .NET, WPF, ArcGISSolutions, ArcGIS-Solutions, ArcGIS-Pro, Military-Tools-for-ArcGIS)
-[](Esri Language: C-Sharp)​
