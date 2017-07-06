@@ -2,7 +2,7 @@
   <Name>Military Tools for ArcMap</Name>
   <AddInID>{4bb81a99-7990-41af-8c88-3e7673263b5c}</AddInID>
   <Description>Military Tools for ArcMap is a collection of tools for coordinate conversion, distance and direction calculations, and visibility analysis.</Description>
-  <Version>1.1</Version>
+  <Version>2.0</Version>
   <Image>Images\MilitaryTools.png</Image>
   <Author>Esri</Author>
   <Company>Esri</Company>
