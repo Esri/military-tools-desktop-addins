@@ -8,13 +8,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProAppCoordConversionModule
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoordinateConversionLibrary", "..\..\..\coordinate-conversion-addin-dotnet\source\CoordinateConversion\CoordinateConversionLibrary\CoordinateConversionLibrary.csproj", "{67FFDFAE-F8EC-45AA-A3F9-6109BCF5BBF4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProAppDistanceAndDirectionModule", "..\..\..\distance-direction-addin-dotnet\source\DistanceAndDirection\ProAppDistanceAndDirectionModule\ProAppDistanceAndDirectionModule\ProAppDistanceAndDirectionModule.csproj", "{AB2934C1-011A-49FE-BD1C-9368CCE0358E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProAppDistanceAndDirectionModule", "..\..\..\distance-direction-addin-dotnet\source\addins\ProAppDistanceAndDirectionModule\ProAppDistanceAndDirectionModule\ProAppDistanceAndDirectionModule.csproj", "{AB2934C1-011A-49FE-BD1C-9368CCE0358E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DistanceAndDirectionLibrary", "..\..\..\distance-direction-addin-dotnet\source\DistanceAndDirection\DistanceAndDirectionLibrary\DistanceAndDirectionLibrary.csproj", "{23854FB8-98F1-443B-82FB-21718D39EF94}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DistanceAndDirectionLibrary", "..\..\..\distance-direction-addin-dotnet\source\addins\DistanceAndDirectionLibrary\DistanceAndDirectionLibrary.csproj", "{23854FB8-98F1-443B-82FB-21718D39EF94}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisibilityLibrary", "..\..\..\visibility-addin-dotnet\source\Visibility\VisibilityLibrary\VisibilityLibrary.csproj", "{D743CD02-174D-44CB-AE88-93C01D21F89E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisibilityLibrary", "..\..\..\visibility-addin-dotnet\source\addins\VisibilityLibrary\VisibilityLibrary.csproj", "{D743CD02-174D-44CB-AE88-93C01D21F89E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProAppVisibilityModule", "..\..\..\visibility-addin-dotnet\source\Visibility\ProAppVisibilityModule\ProAppVisibilityModule.csproj", "{4DE1A8A8-BCA3-40C7-8929-041023F2D3E6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProAppVisibilityModule", "..\..\..\visibility-addin-dotnet\source\addins\ProAppVisibilityModule\ProAppVisibilityModule.csproj", "{4DE1A8A8-BCA3-40C7-8929-041023F2D3E6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProSymbolEditor", "..\..\..\military-symbol-editor-addin-wpf\source\ProSymbolEditor\ProSymbolEditor.csproj", "{4FF462B0-2910-47F3-B6FD-D1D17E5F7DFC}"
 EndProject
