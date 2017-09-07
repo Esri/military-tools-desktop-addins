@@ -208,19 +208,19 @@
       <Project>{67ffdfae-f8ec-45aa-a3f9-6109bcf5bbf4}</Project>
       <Name>CoordinateConversionLibrary</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\distance-direction-addin-dotnet\source\DistanceAndDirection\ArcMapAddinDistanceAndDirection\ArcMapAddinDistanceAndDirection\ArcMapAddinDistanceAndDirection.csproj">
+    <ProjectReference Include="..\..\..\distance-direction-addin-dotnet\source\addins\ArcMapAddinDistanceAndDirection\ArcMapAddinDistanceAndDirection\ArcMapAddinDistanceAndDirection.csproj">
       <Project>{e319bb7c-de2f-44f2-8a0e-ebd4f9e110b7}</Project>
       <Name>ArcMapAddinDistanceAndDirection</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\distance-direction-addin-dotnet\source\DistanceAndDirection\DistanceAndDirectionLibrary\DistanceAndDirectionLibrary.csproj">
+    <ProjectReference Include="..\..\..\distance-direction-addin-dotnet\source\addins\DistanceAndDirectionLibrary\DistanceAndDirectionLibrary.csproj">
       <Project>{23854fb8-98f1-443b-82fb-21718d39ef94}</Project>
       <Name>DistanceAndDirectionLibrary</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\visibility-addin-dotnet\source\Visibility\ArcMapAddinVisibility\ArcMapAddinVisibility.csproj">
+    <ProjectReference Include="..\..\..\visibility-addin-dotnet\source\addins\ArcMapAddinVisibility\ArcMapAddinVisibility.csproj">
       <Project>{6a10f7bd-36d5-4262-85d8-dcbdad5f27eb}</Project>
       <Name>ArcMapAddinVisibility</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\visibility-addin-dotnet\source\Visibility\VisibilityLibrary\VisibilityLibrary.csproj">
+    <ProjectReference Include="..\..\..\visibility-addin-dotnet\source\addins\VisibilityLibrary\VisibilityLibrary.csproj">
       <Project>{d743cd02-174d-44cb-ae88-93c01d21f89e}</Project>
       <Name>VisibilityLibrary</Name>
     </ProjectReference>
