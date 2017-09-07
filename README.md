@@ -28,6 +28,7 @@ Military Tools for ArcGIS is a collection of mission-focused enhancements to sim
 ### Build Requirements 
 
 * Visual Studio 2015
+    * Important Note: Visual Studio 2013 is required if building on ArcGIS 10.3.1
 * ArcGIS for Desktop 
 	* ArcMap 10.3.1+
 	* ArcGIS Pro 2.0+
@@ -64,6 +65,8 @@ Military Tools for ArcGIS is a collection of mission-focused enhancements to sim
 +---military-tools-geoprocessing-toolbox
 +---visibility-addin-dotnet
 ```
+
+**IMPORTANT NOTE: Because of file name length limitations in Visual Studio, the length of the folder name of {Github Clone Location} should not exceed 80 characters**
 
 * A clone [script has been provided](./source/Utilities/CloneDependentRepos.bat) to automate the cloning of these repos. To use:
 	* Open a Git shell/command prompt 
