@@ -3,6 +3,7 @@
   <PropertyGroup>
     <BUILD_MAJOR Condition="'$(BUILD_MAJOR)' == ''">2</BUILD_MAJOR>
     <BUILD_MINOR Condition="'$(BUILD_MINOR)' == ''">0</BUILD_MINOR>
+	<BUILD_PATCH Condition="'$(BUILD_PATCH)' == ''">0</BUILD_PATCH>
     <BUILD_NUMBER Condition="'$(BUILD_NUMBER)' == ''">0</BUILD_NUMBER>
   </PropertyGroup>
   <PropertyGroup>
@@ -180,7 +181,7 @@
     <XmlPeek XmlInputPath="Config.daml" Query="//@version[1]">
       <Output TaskParameter="Result" ItemName="Peeked" />
     </XmlPeek>
-    <Message Importance="High" Text="old build number @(Peeked) new build number $(BUILD_MAJOR).$(BUILD_MINOR).$(BUILD_NUMBER)" />
-    <XmlPoke XmlInputPath="Config.daml" Query="//@version[1]" Value="$(BUILD_MAJOR).$(BUILD_MINOR).$(BUILD_NUMBER)" />
+    <Message Importance="High" Text="old build number @(Peeked) new build number $(BUILD_MAJOR).$(BUILD_MINOR).$(BUILD_PATCH).$(BUILD_NUMBER)" />
+    <XmlPoke XmlInputPath="Config.daml" Query="//@version[1]" Value="$(BUILD_MAJOR).$(BUILD_MINOR).$(BUILD_PATCH).$(BUILD_NUMBER)" />
   </Target>
 </Project>
