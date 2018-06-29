@@ -1,6 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
+    <CurrentYear>$([System.DateTime]::Now.Year)</CurrentYear>
+    <CurrentMonth>$([System.DateTime]::Now.Month)</CurrentMonth>
+    <CurrentDay>$([System.DateTime]::Now.Day)</CurrentDay>
+  </PropertyGroup>
+  <PropertyGroup>
+    <BUILD_MAJOR Condition="'$(BUILD_MAJOR)' == ''">4</BUILD_MAJOR>
+    <BUILD_MINOR Condition="'$(BUILD_MINOR)' == ''">0</BUILD_MINOR>
+    <BUILD_PATCH Condition="'$(BUILD_PATCH)' == ''">0</BUILD_PATCH>
+    <BUILD_NUMBER Condition="'$(BUILD_NUMBER)' == ''">0</BUILD_NUMBER>
+    <BUILD_DATE Condition="'$(BUILD_DATE)' == ''">$(CurrentMonth)/$(CurrentDay)/$(CurrentYear)</BUILD_DATE>
+  </PropertyGroup>
+  <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.21022</ProductVersion>
@@ -208,19 +220,19 @@
       <Project>{67ffdfae-f8ec-45aa-a3f9-6109bcf5bbf4}</Project>
       <Name>CoordinateConversionLibrary</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\distance-direction-addin-dotnet\source\DistanceAndDirection\ArcMapAddinDistanceAndDirection\ArcMapAddinDistanceAndDirection\ArcMapAddinDistanceAndDirection.csproj">
+    <ProjectReference Include="..\..\..\distance-direction-addin-dotnet\source\addins\ArcMapAddinDistanceAndDirection\ArcMapAddinDistanceAndDirection\ArcMapAddinDistanceAndDirection.csproj">
       <Project>{e319bb7c-de2f-44f2-8a0e-ebd4f9e110b7}</Project>
       <Name>ArcMapAddinDistanceAndDirection</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\distance-direction-addin-dotnet\source\DistanceAndDirection\DistanceAndDirectionLibrary\DistanceAndDirectionLibrary.csproj">
+    <ProjectReference Include="..\..\..\distance-direction-addin-dotnet\source\addins\DistanceAndDirectionLibrary\DistanceAndDirectionLibrary.csproj">
       <Project>{23854fb8-98f1-443b-82fb-21718d39ef94}</Project>
       <Name>DistanceAndDirectionLibrary</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\visibility-addin-dotnet\source\Visibility\ArcMapAddinVisibility\ArcMapAddinVisibility.csproj">
+    <ProjectReference Include="..\..\..\visibility-addin-dotnet\source\addins\ArcMapAddinVisibility\ArcMapAddinVisibility.csproj">
       <Project>{6a10f7bd-36d5-4262-85d8-dcbdad5f27eb}</Project>
       <Name>ArcMapAddinVisibility</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\visibility-addin-dotnet\source\Visibility\VisibilityLibrary\VisibilityLibrary.csproj">
+    <ProjectReference Include="..\..\..\visibility-addin-dotnet\source\addins\VisibilityLibrary\VisibilityLibrary.csproj">
       <Project>{d743cd02-174d-44cb-ae88-93c01d21f89e}</Project>
       <Name>VisibilityLibrary</Name>
     </ProjectReference>
@@ -234,9 +246,21 @@
   <Import Project="$(MSBuildExtensionsPath)\ESRI\ESRI.ArcGIS.AddIns.11.targets" Condition="Exists('$(MSBuildExtensionsPath)\ESRI\ESRI.ArcGIS.AddIns.11.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
   -->
+  <Target Name="BeforeBuild">
+    <!-- Set Version element in Config.esriaddinx -->
+    <XmlPeek XmlInputPath="Config.esriaddinx" Query="/x:ESRI.Configuration/x:Version/text()" Namespaces="&lt;Namespace Prefix='x' Uri='http://schemas.esri.com/Desktop/AddIns' /&gt;">
+      <Output TaskParameter="Result" ItemName="Peeked" />
+    </XmlPeek>
+    <Message Importance="High" Text="Old build number: @(Peeked) New build number: $(BUILD_MAJOR).$(BUILD_MINOR).$(BUILD_PATCH).$(BUILD_NUMBER)" />
+    <XmlPoke XmlInputPath="Config.esriaddinx" Query="/x:ESRI.Configuration/x:Version" Namespaces="&lt;Namespace Prefix='x' Uri='http://schemas.esri.com/Desktop/AddIns' /&gt;" Value="$(BUILD_MAJOR).$(BUILD_MINOR).$(BUILD_PATCH).$(BUILD_NUMBER)" />
+    <!-- Set Date element in Config.esriaddinx -->
+    <XmlPeek XmlInputPath="Config.esriaddinx" Query="/x:ESRI.Configuration/x:Date/text()" Namespaces="&lt;Namespace Prefix='x' Uri='http://schemas.esri.com/Desktop/AddIns' /&gt;">
+      <Output TaskParameter="Result" ItemName="Peeked_Date" />
+    </XmlPeek>
+    <Message Importance="High" Text="Old build date: @(Peeked_Date) New build date: $(BUILD_DATE)" />
+    <XmlPoke XmlInputPath="Config.esriaddinx" Query="/x:ESRI.Configuration/x:Date" Namespaces="&lt;Namespace Prefix='x' Uri='http://schemas.esri.com/Desktop/AddIns' /&gt;" Value="$(BUILD_DATE)" />
+  </Target>   
   <Target Name="AfterBuild">
     <!-- Gives build warning when add-in targets file is not found. -->
     <Warning Text="Unable to create .esriAddin; missing ESRI ArcGIS Add-in SDK component(s)." Condition="!Exists('$(MSBuildExtensionsPath)\ESRI\ESRI.ArcGIS.AddIns.11.targets')" />

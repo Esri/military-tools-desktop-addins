@@ -16,13 +16,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArcMapAddinCoordinateConver
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoordinateConversionLibrary", "..\..\..\coordinate-conversion-addin-dotnet\source\CoordinateConversion\CoordinateConversionLibrary\CoordinateConversionLibrary.csproj", "{67FFDFAE-F8EC-45AA-A3F9-6109BCF5BBF4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArcMapAddinDistanceAndDirection", "..\..\..\distance-direction-addin-dotnet\source\DistanceAndDirection\ArcMapAddinDistanceAndDirection\ArcMapAddinDistanceAndDirection\ArcMapAddinDistanceAndDirection.csproj", "{E319BB7C-DE2F-44F2-8A0E-EBD4F9E110B7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArcMapAddinDistanceAndDirection", "..\..\..\distance-direction-addin-dotnet\source\addins\ArcMapAddinDistanceAndDirection\ArcMapAddinDistanceAndDirection\ArcMapAddinDistanceAndDirection.csproj", "{E319BB7C-DE2F-44F2-8A0E-EBD4F9E110B7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DistanceAndDirectionLibrary", "..\..\..\distance-direction-addin-dotnet\source\DistanceAndDirection\DistanceAndDirectionLibrary\DistanceAndDirectionLibrary.csproj", "{23854FB8-98F1-443B-82FB-21718D39EF94}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DistanceAndDirectionLibrary", "..\..\..\distance-direction-addin-dotnet\source\addins\DistanceAndDirectionLibrary\DistanceAndDirectionLibrary.csproj", "{23854FB8-98F1-443B-82FB-21718D39EF94}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArcMapAddinVisibility", "..\..\..\visibility-addin-dotnet\source\Visibility\ArcMapAddinVisibility\ArcMapAddinVisibility.csproj", "{6A10F7BD-36D5-4262-85D8-DCBDAD5F27EB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArcMapAddinVisibility", "..\..\..\visibility-addin-dotnet\source\addins\ArcMapAddinVisibility\ArcMapAddinVisibility.csproj", "{6A10F7BD-36D5-4262-85D8-DCBDAD5F27EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisibilityLibrary", "..\..\..\visibility-addin-dotnet\source\Visibility\VisibilityLibrary\VisibilityLibrary.csproj", "{D743CD02-174D-44CB-AE88-93C01D21F89E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisibilityLibrary", "..\..\..\visibility-addin-dotnet\source\addins\VisibilityLibrary\VisibilityLibrary.csproj", "{D743CD02-174D-44CB-AE88-93C01D21F89E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
