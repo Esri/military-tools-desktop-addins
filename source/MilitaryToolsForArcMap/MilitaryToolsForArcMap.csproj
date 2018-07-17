@@ -53,6 +53,8 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <PlatformTarget>x86</PlatformTarget>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -61,6 +63,8 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ESRI.ArcGIS.Carto, Version=10.3.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
@@ -260,7 +264,7 @@
     </XmlPeek>
     <Message Importance="High" Text="Old build date: @(Peeked_Date) New build date: $(BUILD_DATE)" />
     <XmlPoke XmlInputPath="Config.esriaddinx" Query="/x:ESRI.Configuration/x:Date" Namespaces="&lt;Namespace Prefix='x' Uri='http://schemas.esri.com/Desktop/AddIns' /&gt;" Value="$(BUILD_DATE)" />
-  </Target>   
+  </Target>
   <Target Name="AfterBuild">
     <!-- Gives build warning when add-in targets file is not found. -->
     <Warning Text="Unable to create .esriAddin; missing ESRI ArcGIS Add-in SDK component(s)." Condition="!Exists('$(MSBuildExtensionsPath)\ESRI\ESRI.ArcGIS.AddIns.11.targets')" />
