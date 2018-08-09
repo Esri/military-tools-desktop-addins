@@ -19,7 +19,7 @@ namespace MilitaryTools
         /// Implementation class of the dockable window add-in. It is responsible for 
         /// creating and disposing the user interface class of the dockable window.
         /// </summary>
-        public class AddinImpl : ESRI.ArcGIS.Desktop.AddIns.DockableWindow
+        public new class AddinImpl : ESRI.ArcGIS.Desktop.AddIns.DockableWindow
         {
             private System.Windows.Forms.Integration.ElementHost m_windowUI;
 

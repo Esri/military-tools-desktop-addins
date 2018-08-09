@@ -1,11 +1,11 @@
-<ArcGIS defaultAssembly="" defaultNamespace=""  xmlns="http://schemas.esri.com/DADF/Registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.esri.com/DADF/Registry file:///C:/Program%20Files/ArcGIS/Pro/bin/ArcGIS.Desktop.Framework.xsd">
-  <AddInInfo id="{bea7f059-c69e-4e17-84bd-072236629c0c}" version="2.0" desktopVersion="2.1">
+<ArcGIS defaultAssembly="" defaultNamespace="" xmlns="http://schemas.esri.com/DADF/Registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.esri.com/DADF/Registry file:///C:/Program%20Files/ArcGIS/Pro/bin/ArcGIS.Desktop.Framework.xsd">
+  <AddInInfo id="{bea7f059-c69e-4e17-84bd-072236629c0c}" version="4.0.0.0" desktopVersion="2.1">
     <Name>Military Tools for ArcGIS Pro</Name>
     <Description>Military Tools for ArcGIS Pro is a collection of tools for coordinate conversion, distance and direction calculations, visibility analysis, and the creation of military symbols.</Description>
     <Image>Images\AddinDesktop32.png</Image>
     <Author>Esri</Author>
     <Company>Esri</Company>
-    <Date>6/23/2017</Date>
+    <Date>6/26/2018</Date>
     <Subject>Framework</Subject>
     <!-- Note subject can be one or more of these topics:
                     Content, Framework, Editing, Geodatabase, Geometry, Geoprocessing, Layouts, Map Authoring, Map Exploration -->
@@ -33,37 +33,40 @@
         <!-- add your controls here -->
         <button id="ProAppCoordConversionModule_CoordinateConversionDockpane_ShowButton" caption="Coordinate Conversion" assembly="CoordinateConversion.dll" className="ProAppCoordConversionModule.CoordinateConversionDockpane_ShowButton" loadOnClick="true" smallImage="Images\coordinate-conversion-16.png" largeImage="Images\coordinate-conversion-32.png">
           <tooltip heading="Coordinate Conversion">
-            Convert coordinate notation from one notation format to another.<disabledText />
-          </tooltip>
+            Convert coordinate notation from one notation format to another.<disabledText /></tooltip>
         </button>
         <button id="ProAppCoordConversionModule_ContextCopyDDButton" caption="DD" assembly="CoordinateConversion.dll" className="ProAppCoordConversionModule.ContextCopyDD" loadOnClick="true" smallImage="Images\coordinate-conversion-16.png" largeImage="Images\coordinate-conversion-32.png">
-          <tooltip heading="Copy DD Coordinate"></tooltip>
+          <tooltip heading="Copy DD Coordinate">
+          </tooltip>
         </button>
         <button id="ProAppCoordConversionModule_ContextCopyDDMButton" caption="DDM" assembly="CoordinateConversion.dll" className="ProAppCoordConversionModule.ContextCopyDDM" loadOnClick="true" smallImage="Images\coordinate-conversion-16.png" largeImage="Images\coordinate-conversion-32.png">
-          <tooltip heading="Copy DDM Coordinate"></tooltip>
+          <tooltip heading="Copy DDM Coordinate">
+          </tooltip>
         </button>
         <button id="ProAppCoordConversionModule_ContextCopyDMSButton" caption="DMS" assembly="CoordinateConversion.dll" className="ProAppCoordConversionModule.ContextCopyDMS" loadOnClick="true" smallImage="Images\coordinate-conversion-16.png" largeImage="Images\coordinate-conversion-32.png">
-          <tooltip heading="Copy DMS Coordinate"></tooltip>
+          <tooltip heading="Copy DMS Coordinate">
+          </tooltip>
         </button>
         <!--<button id="ProAppCoordConversionModule_ContextCopyGARSButton" caption="GARS" assembly="CoordinateConversion.dll" className="ProAppCoordConversionModule.ContextCopyGARS" loadOnClick="true" smallImage="Images\coordinate-conversion-16.png" largeImage="Images\coordinate-conversion-32.png">
           <tooltip heading="Copy GARS Coordinate"></tooltip>
         </button>-->
         <button id="ProAppCoordConversionModule_ContextCopyMGRSButton" caption="MGRS" assembly="CoordinateConversion.dll" className="ProAppCoordConversionModule.ContextCopyMGRS" loadOnClick="true" smallImage="Images\coordinate-conversion-16.png" largeImage="Images\coordinate-conversion-32.png">
-          <tooltip heading="Copy MGRS Coordinate"></tooltip>
+          <tooltip heading="Copy MGRS Coordinate">
+          </tooltip>
         </button>
         <button id="ProAppCoordConversionModule_ContextCopyUSNGButton" caption="USNG" assembly="CoordinateConversion.dll" className="ProAppCoordConversionModule.ContextCopyUSNG" loadOnClick="true" smallImage="Images\coordinate-conversion-16.png" largeImage="Images\coordinate-conversion-32.png">
-          <tooltip heading="Copy USNG Coordinate"></tooltip>
+          <tooltip heading="Copy USNG Coordinate">
+          </tooltip>
         </button>
         <button id="ProAppCoordConversionModule_ContextCopyUTMButton" caption="UTM" assembly="CoordinateConversion.dll" className="ProAppCoordConversionModule.ContextCopyUTM" loadOnClick="true" smallImage="Images\coordinate-conversion-16.png" largeImage="Images\coordinate-conversion-32.png">
-          <tooltip heading="Copy UTM Coordinate"></tooltip>
+          <tooltip heading="Copy UTM Coordinate">
+          </tooltip>
         </button>
         <tool id="ProAppCoordConversionModule_CoordinateMapTool" caption="Map Point Tool" assembly="CoordinateConversion.dll" className="ProAppCoordConversionModule.CoordinateMapTool" loadOnClick="true" smallImage="Images\coordinate-conversion-16.png" largeImage="Images\coordinate-conversion-32.png" condition="esri_mapping_mapPane">
-          <tooltip heading="Coordinate Conversion">Coordinate Conversion Map Point Tool<disabledText />
-          </tooltip>
+          <tooltip heading="Coordinate Conversion">Coordinate Conversion Map Point Tool<disabledText /></tooltip>
         </tool>
         <button id="ProAppCoordConversionModule_PropertiesButton" caption="Properties" assembly="CoordinateConversion.dll" className="ProAppCoordConversionModule.PropertiesButton" loadOnClick="true" smallImage="Images\coordinate-conversion-16.png" largeImage="Images\coordinate-conversion-32.png">
-          <tooltip heading="Coordiante Conversion Properties">Coordinate Conversion Edit Properties<disabledText />
-          </tooltip>
+          <tooltip heading="Coordiante Conversion Properties">Coordinate Conversion Edit Properties<disabledText /></tooltip>
         </button>
       </controls>
       <dockPanes>
@@ -107,16 +110,13 @@
         <!-- add your controls here -->
         <button id="ProAppVisibilityModule_VisibilityDockpane_ShowButton" caption="Visibility" assembly="Visibility.dll" className="ProAppVisibilityModule.VisibilityDockpane_ShowButton" loadOnClick="true" smallImage="Images\visibility-16.png" largeImage="Images\visibility-32.png">
           <tooltip heading="Visibility">
-            Perform Linear (LLOS) and Radial (RLOS) line of sight analysis. LLOS determines if a target(s) is observable from an observer(s) location. RLOS determines what is visible from observer(s) location based on a given distance and a field of view.<disabledText />
-          </tooltip>
+            Perform Linear (LLOS) and Radial (RLOS) line of sight analysis. LLOS determines if a target(s) is observable from an observer(s) location. RLOS determines what is visible from observer(s) location based on a given distance and a field of view.<disabledText /></tooltip>
         </button>
         <button id="ProAppVisibilityModule_PropertiesButton" caption="Properties" assembly="Visibility.dll" className="ProAppVisibilityModule.PropertiesButton" loadOnClick="true" smallImage="Images\GenericButtonBlue16.png" largeImage="Images\GenericButtonBlue32.png">
-          <tooltip heading="Edit Properties">Visibility Edit Properties<disabledText />
-          </tooltip>
+          <tooltip heading="Edit Properties">Visibility Edit Properties<disabledText /></tooltip>
         </button>
         <tool id="ProAppVisibilityModule_MapTool" caption="Map Point Tool" assembly="Visibility.dll" className="ProAppVisibilityModule.VisibilityMapTool" loadOnClick="true" smallImage="Images\GenericButtonRed16.png" largeImage="Images\GenericButtonRed32.png" condition="esri_mapping_mapPane">
-          <tooltip heading="Visibility Map Tool">Visibility Map Tool<disabledText />
-          </tooltip>
+          <tooltip heading="Visibility Map Tool">Visibility Map Tool<disabledText /></tooltip>
         </tool>
       </controls>
       <dockPanes>
@@ -141,16 +141,13 @@
         <!-- add your controls here -->
         <button id="ProAppDistanceAndDirectionModule_DistanceAndDirectionDockpane_ShowButton" caption="Distance and Direction" assembly="DistanceAndDirection.dll" className="ProAppDistanceAndDirectionModule.DistanceAndDirectionDockpane_ShowButton" loadOnClick="true" smallImage="Images\distance-direction-16.png" largeImage="Images\distance-direction-32.png">
           <tooltip heading="Distance and Direction">
-            Interactively create geodetic lines, circles, ellipses, range rings, and distance calculations based on time and rate. Created graphics can be saved to feature classes, shapefiles, and KMZ files.<disabledText />
-          </tooltip>
+            Interactively create geodetic lines, circles, ellipses, range rings, and distance calculations based on time and rate. Created graphics can be saved to feature classes, shapefiles, and KMZ files.<disabledText /></tooltip>
         </button>
         <button id="ProAppDistanceAndDirectionModule_PropertiesButton" caption="Properties" assembly="DistanceAndDirection.dll" className="ProAppDistanceAndDirectionModule.PropertiesButton" loadOnClick="true" smallImage="Images\GenericButtonBlue16.png" largeImage="Images\GenericButtonBlue32.png">
-          <tooltip heading="Distance and Direction Properties">Distance and Direction Edit Properties<disabledText />
-          </tooltip>
+          <tooltip heading="Distance and Direction Properties">Distance and Direction Edit Properties<disabledText /></tooltip>
         </button>
         <tool id="ProAppDistanceAndDirectionModule_SketchTool" caption="SketchTool " assembly="DistanceAndDirection.dll" className="ProAppDistanceAndDirectionModule.SketchTool" loadOnClick="true" smallImage="Images\GenericButtonRed16.png" largeImage="Images\GenericButtonRed32.png" condition="esri_mapping_mapPane">
-          <tooltip heading="Tooltip Heading">Distance and Direction Sketch Tool<disabledText />
-          </tooltip>
+          <tooltip heading="Tooltip Heading">Distance and Direction Sketch Tool<disabledText /></tooltip>
         </tool>
       </controls>
       <dockPanes>
@@ -177,23 +174,19 @@
       <controls>
         <!-- add your controls here -->
         <button id="ProSymbolEditor_MilitarySymbolDockpane_ShowButton" caption="Military Symbol Editor" assembly="MilitarySymbolEditor.dll" className="ProSymbolEditor.MilitarySymbolDockpane_ShowButton" loadOnClick="true" smallImage="Images\MIL-16x16.png" largeImage="Images\MIL-32x32.png">
-          <tooltip heading="Military Symbol Editor">Create military overlays using MIL-STD-2525D and MIL-STD-2525B Change 2.<disabledText/>
-          </tooltip>
+          <tooltip heading="Military Symbol Editor">Create military overlays using MIL-STD-2525D and MIL-STD-2525B Change 2.<disabledText /></tooltip>
         </button>
         <!--<button id="ProSymbolEditor_MilitarySymbolDockpane_MenuButton" caption="Burger Menu Button" className="MilitarySymbolDockpane_MenuButton" loadOnClick="true" smallImage="Images\GenericButtonPurple16.png" largeImage="Images\GenericButtonPurple32.png">
           <tooltip heading="Burger Menu Button">ToolTip<disabledText /></tooltip>
         </button>-->
         <tool id="ProSymbolEditor_CoordinateMapTool" caption="CoordinateMapTool " assembly="MilitarySymbolEditor.dll" className="ProSymbolEditor.CoordinateMapTool" loadOnClick="true" smallImage="Images\GenericButtonRed16.png" largeImage="Images\GenericButtonRed32.png" condition="esri_mapping_mapPane">
-          <tooltip heading="Tooltip Heading">Military Symbol Editor Map Tool<disabledText />
-          </tooltip>
+          <tooltip heading="Tooltip Heading">Military Symbol Editor Map Tool<disabledText /></tooltip>
         </tool>
         <tool id="ProSymbolEditor_DrawFeatureSketchTool" caption="DrawFeatureSketchTool " assembly="MilitarySymbolEditor.dll" className="ProSymbolEditor.DrawFeatureSketchTool" loadOnClick="true" smallImage="Images\GenericButtonRed16.png" largeImage="Images\GenericButtonRed32.png" condition="esri_mapping_mapPane">
-          <tooltip heading="Tooltip Heading">Military Symbol Editor Sketch Tool<disabledText />
-          </tooltip>
+          <tooltip heading="Tooltip Heading">Military Symbol Editor Sketch Tool<disabledText /></tooltip>
         </tool>
         <tool id="ProSymbolEditor_SelectionMapTool" caption="SelectionMapTool " assembly="MilitarySymbolEditor.dll" className="ProSymbolEditor.SelectionMapTool" loadOnClick="true" smallImage="Images\GenericButtonRed16.png" largeImage="Images\GenericButtonRed32.png" condition="esri_mapping_mapPane">
-          <tooltip heading="Tooltip Heading">Military Symbol Editor Map Tool<disabledText />
-          </tooltip>
+          <tooltip heading="Tooltip Heading">Military Symbol Editor Map Tool<disabledText /></tooltip>
         </tool>
       </controls>
       <dockPanes>
@@ -218,7 +211,7 @@
       </groups>
       <tabs>
         <tab id="ProAppMilitaryTools_Tab0" caption="Military Tools" keytip="P">
-          <group refID="ProAppMilitaryTools_Group0"/>         
+          <group refID="ProAppMilitaryTools_Group0" />
         </tab>
       </tabs>
     </insertModule>
@@ -228,9 +221,11 @@
         <updateMenu refID="esri_mapping_selection2DContextMenu">
           <insertMenu refID="ProAppCoordConversionModule_ContextCopyMenu" separator="true" />
         </updateMenu>
-        <updateMenu refID="esri_mapping_popupToolContextMenu">
+        <!-- NOTE: This context menu "Convert Coordinates" was added for Pro 2.2 to the mapping pop-up 
+         so the custom one below has been removed from this pop-up -->
+        <!--<updateMenu refID="esri_mapping_popupToolContextMenu">
           <insertMenu refID="ProAppCoordConversionModule_ContextCopyMenu" separator="true" />
-        </updateMenu>
+        </updateMenu>-->
       </menus>
     </updateModule>
   </modules>
