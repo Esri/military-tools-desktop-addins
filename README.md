@@ -34,7 +34,7 @@ Military Tools for ArcGIS is a collection of mission-focused enhancements to sim
 	* ArcGIS Pro 2.1+
 * ArcGIS Desktop SDK for .NET 10.3.1+
 	* [ArcGIS Desktop for .NET Requirements](https://desktop.arcgis.com/en/desktop/latest/get-started/system-requirements/arcobjects-sdk-system-requirements.htm)
-* [ArcGIS Pro SDK](http://pro.arcgis.com/en/pro-app/sdk/) 2.0+
+* [ArcGIS Pro SDK](http://pro.arcgis.com/en/pro-app/sdk/) 2.1+
 
 ### Run Requirements
 
@@ -52,7 +52,7 @@ Military Tools for ArcGIS is a collection of mission-focused enhancements to sim
 * Clone each of the following component repositories *to the same folder location* 
 	* [coordinate-conversion-addin-dotnet](https://github.com/Esri/coordinate-conversion-addin-dotnet)
 	* [distance-direction-addin-dotnet](https://github.com/Esri/distance-direction-addin-dotnet)
-	* [military-symbol-editor-addin-wpf](https://github.com/Esri/military-symbol-editor-addin-wpf)
+	* [military-symbology](https://github.com/Esri/military-symbology)
 	* [visibility-addin-dotnet](https://github.com/Esri/visibility-addin-dotnet)
 * Your local folder structure should now look like:
 
@@ -61,7 +61,7 @@ Military Tools for ArcGIS is a collection of mission-focused enhancements to sim
 +---military-tools-desktop-addins
 +---coordinate-conversion-addin-dotnet
 +---distance-direction-addin-dotnet
-+---military-symbol-editor-addin-wpf
++---military-symbology
 +---military-tools-geoprocessing-toolbox
 +---visibility-addin-dotnet
 ```
