@@ -12,7 +12,7 @@ Military Tools for ArcGIS is a collection of mission-focused enhancements to sim
 	* [Military Symbol Editor](https://github.com/Esri/military-symbol-editor-addin-wpf) (ArcGIS Pro Only)
 	* [Visibility](https://github.com/Esri/visibility-addin-dotnet)
 * Addin for ArcMap 10.3.1+
-* Addin for ArcGIS Pro 2.0+ 
+* Addin for ArcGIS Pro 2.1+ 
 
 ## Sections
 
@@ -31,7 +31,7 @@ Military Tools for ArcGIS is a collection of mission-focused enhancements to sim
     * Important Note: Visual Studio 2013 is required if building on ArcGIS 10.3.1
 * ArcGIS for Desktop 
 	* ArcMap 10.3.1+
-	* ArcGIS Pro 2.0+
+	* ArcGIS Pro 2.1+
 * ArcGIS Desktop SDK for .NET 10.3.1+
 	* [ArcGIS Desktop for .NET Requirements](https://desktop.arcgis.com/en/desktop/latest/get-started/system-requirements/arcobjects-sdk-system-requirements.htm)
 * [ArcGIS Pro SDK](http://pro.arcgis.com/en/pro-app/sdk/) 2.0+
@@ -40,7 +40,7 @@ Military Tools for ArcGIS is a collection of mission-focused enhancements to sim
 
 * ArcGIS for Desktop 
 	* ArcMap 10.3.1+
-	* ArcGIS Pro 2.0+
+	* ArcGIS Pro 2.1+
 
 ## Instructions
 
