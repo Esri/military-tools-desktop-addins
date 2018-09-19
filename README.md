@@ -34,7 +34,7 @@ Military Tools for ArcGIS is a collection of mission-focused enhancements to sim
 	* ArcGIS Pro 2.1+
 * ArcGIS Desktop SDK for .NET 10.3.1+
 	* [ArcGIS Desktop for .NET Requirements](https://desktop.arcgis.com/en/desktop/latest/get-started/system-requirements/arcobjects-sdk-system-requirements.htm)
-* [ArcGIS Pro SDK](http://pro.arcgis.com/en/pro-app/sdk/) 2.0+
+* [ArcGIS Pro SDK](http://pro.arcgis.com/en/pro-app/sdk/) 2.1+
 
 ### Run Requirements
 
