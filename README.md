@@ -130,7 +130,7 @@ Esri welcomes contributions from anyone and everyone. Please see our [guidelines
 
 
 ## Repository Points of Contact 
-Contact the [Military Tools team](defensesolutions@esri.com)
+Contact the [Military Tools team](mailto:defensesolutions@esri.com)
 
 ## Licensing
 Copyright 2018 Esri
