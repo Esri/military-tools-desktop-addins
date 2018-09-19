@@ -1,15 +1,15 @@
 # military-tools-desktop-addins
 
-Military Tools for ArcGIS is a collection of mission-focused enhancements to simplify defense and intelligence workflows in ArcGIS. The Military Tools for ArcGIS Desktop Add-ins repository combines several related mission-focused ArcGIS addins for defense and intelligence (see [Resources](#resources) section) as a single installable Add-in toolbar for ArcMap and ArcGIS Pro.
+Military Tools for ArcGIS is a collection of mission-focused enhancements to simplify defense and intelligence workflows in ArcGIS. The Military Tools for ArcGIS Desktop add-ins repository combines several related mission-focused ArcGIS add-ins for defense and intelligence (see [Resources](#resources) section) as a single installable add-in toolbar for ArcMap and ArcGIS Pro.
 
 ![screenshot of toolbar](Screenshot.png)
 
 ## Features
 
-* ArcMap Toolbar and ArcGIS Pro Tab for the set of Military Tools for ArcGIS
+* ArcMap toolbar and ArcGIS Pro tab for the set of Military Tools for ArcGIS
 	* [Coordinate Conversion](https://github.com/Esri/coordinate-conversion-addin-dotnet)
 	* [Distance and Direction](https://github.com/Esri/distance-direction-addin-dotnet)
-	* [Military Symbol Editor](https://github.com/Esri/military-symbol-editor-addin-wpf) (ArcGIS Pro Only)
+	* [Military Symbol Editor](https://github.com/Esri/military-symbology) (ArcGIS Pro Only)
 	* [Visibility](https://github.com/Esri/visibility-addin-dotnet)
 * Addin for ArcMap 10.3.1+
 * Addin for ArcGIS Pro 2.1+ 
@@ -34,7 +34,7 @@ Military Tools for ArcGIS is a collection of mission-focused enhancements to sim
 	* ArcGIS Pro 2.1+
 * ArcGIS Desktop SDK for .NET 10.3.1+
 	* [ArcGIS Desktop for .NET Requirements](https://desktop.arcgis.com/en/desktop/latest/get-started/system-requirements/arcobjects-sdk-system-requirements.htm)
-* [ArcGIS Pro SDK](http://pro.arcgis.com/en/pro-app/sdk/) 2.0+
+* [ArcGIS Pro SDK](http://pro.arcgis.com/en/pro-app/sdk/) 2.1+
 
 ### Run Requirements
 
@@ -52,7 +52,7 @@ Military Tools for ArcGIS is a collection of mission-focused enhancements to sim
 * Clone each of the following component repositories *to the same folder location* 
 	* [coordinate-conversion-addin-dotnet](https://github.com/Esri/coordinate-conversion-addin-dotnet)
 	* [distance-direction-addin-dotnet](https://github.com/Esri/distance-direction-addin-dotnet)
-	* [military-symbol-editor-addin-wpf](https://github.com/Esri/military-symbol-editor-addin-wpf)
+	* [military-symbology](https://github.com/Esri/military-symbology)
 	* [visibility-addin-dotnet](https://github.com/Esri/visibility-addin-dotnet)
 * Your local folder structure should now look like:
 
@@ -61,7 +61,7 @@ Military Tools for ArcGIS is a collection of mission-focused enhancements to sim
 +---military-tools-desktop-addins
 +---coordinate-conversion-addin-dotnet
 +---distance-direction-addin-dotnet
-+---military-symbol-editor-addin-wpf
++---military-symbology
 +---military-tools-geoprocessing-toolbox
 +---visibility-addin-dotnet
 ```
@@ -90,11 +90,11 @@ Military Tools for ArcGIS is a collection of mission-focused enhancements to sim
 
 #### Running
 
-* ArcGIS Pro Add-in
+* ArcGIS Pro add-in
 	* Double-click to install the build add-in file: 
 	* `military-tools-desktop-addins\source\MilitaryToolsForArcGISPro\bin\Release\MilitaryToolsforArcGISPro.esriAddinX`
 	* Run ArcGIS Pro and use the tools on the Military Tools tab
-* ArcMap Add-in
+* ArcMap add-in
 	* Double-click to install the build add-in file: 
 	* `military-tools-desktop-addins\source\MilitaryToolsForArcMap\bin\Release\MilitaryToolsforArcMap.esriAddIn`
 	* Run ArcMap and enable the Military Tools toolbar
@@ -107,19 +107,17 @@ For more information, please consult the [wiki](https://github.com/Esri/military
 
 * [Military Tools for ArcGIS](http://solutions.arcgis.com/defense/help/military-tools/)
 * [ArcGIS for Defense Downloads](http://appsforms.esri.com/products/download/#ArcGIS_for_Defense)
-* [ArcGIS Solutions Website](http://solutions.arcgis.com/military/)
+* [ArcGIS Solutions Website](http://solutions.arcgis.com/#Defense)
 * [ArcGIS 10.X Help](http://resources.arcgis.com/en/help/)
 * [ArcGIS Blog](http://blogs.esri.com/esri/arcgis/)
 * [ArcGIS Pro Help](http://pro.arcgis.com/en/pro-app/)
-* ![Twitter](https://g.twimg.com/twitter-bird-16x16.png)[@EsriDefense](http://twitter.com/EsriDefense)
 
 ### Related repositories:
 
 * [coordinate-conversion-addin-dotnet](https://github.com/Esri/coordinate-conversion-addin-dotnet)
 * [distance-direction-addin-dotnet](https://github.com/Esri/distance-direction-addin-dotnet)
-* [military-symbol-editor-addin-wpf](https://github.com/Esri/military-symbol-editor-addin-wpf)
+* [military-symbology](https://github.com/Esri/military-symbology)
 * [military-tools-geoprocessing-toolbox](https://github.com/Esri/military-tools-geoprocessing-toolbox)
-* [solutions-webappbuilder-widgets](https://github.com/Esri/solutions-webappbuilder-widgets)
 * [visibility-addin-dotnet](https://github.com/Esri/visibility-addin-dotnet)
 
 ## Issues
@@ -130,28 +128,18 @@ Find a bug or want to request a new feature?  Please let us know by submitting a
 
 Esri welcomes contributions from anyone and everyone. Please see our [guidelines for contributing](https://github.com/esri/contributing).
 
-### Repository Points of Contact
 
-##### Repository Owner: [Kevin](https://github.com/kgonzago)
-
-* Review/Merge Pull Requests
-* Creates Releases and Tags
-* Manages Milestones
-* Manages and Assigns Issues
-
-##### Secondary: [Lorraine](https://github.com/lfunkhouser)
-
-* Backup when the Owner is unavailable
+## Repository Points of Contact 
+Contact the [Military Tools team](defensesolutions@esri.com)
 
 ## Licensing
-
-Copyright 2016-2017 Esri
+Copyright 2018 Esri
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+You may obtain a copy of the License at:
 
-   http://www.apache.org/licenses/LICENSE-2.0
+   http://www.apache.org/licenses/LICENSE-2.0.
 
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
@@ -159,5 +147,5 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 
-A copy of the license is available in the repository's [LICENSE](./LICENSE) file.
+A copy of the license is available in the repository's [license.txt](./License.txt) file.
 
