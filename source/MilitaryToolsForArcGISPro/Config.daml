@@ -1,4 +1,4 @@
-<ArcGIS defaultAssembly="" defaultNamespace="" xmlns="http://schemas.esri.com/DADF/Registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.esri.com/DADF/Registry file:///C:/Program%20Files/ArcGIS/Pro/bin/ArcGIS.Desktop.Framework.xsd">
+<ArcGIS defaultAssembly="MilitaryToolsForArcGISPro.dll" defaultNamespace="" xmlns="http://schemas.esri.com/DADF/Registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.esri.com/DADF/Registry file:///C:/Program%20Files/ArcGIS/Pro/bin/ArcGIS.Desktop.Framework.xsd">
   <AddInInfo id="{bea7f059-c69e-4e17-84bd-072236629c0c}" version="4.0.0.0" desktopVersion="2.1">
     <Name>Military Tools for ArcGIS Pro</Name>
     <Description>Military Tools for ArcGIS Pro is a collection of tools for coordinate conversion, distance and direction calculations, visibility analysis, and the creation of military symbols.</Description>
@@ -10,6 +10,11 @@
     <!-- Note subject can be one or more of these topics:
                     Content, Framework, Editing, Geodatabase, Geometry, Geoprocessing, Layouts, Map Authoring, Map Exploration -->
   </AddInInfo>
+  <conditions>
+    <insertCondition id="visibility_license_check" caption="License State">
+      <state id="visibility_groupstate" />
+    </insertCondition>
+  </conditions>
   <categories>
     <updateCategory refID="esri_embeddableControls">
       <insertComponent id="ProAppCoordConversionModule_EmbeddableControl" assembly="CoordinateConversion.dll" className="ProAppCoordConversionModule.UI.FlashEmbeddedControlViewModel">
@@ -18,7 +23,7 @@
     </updateCategory>
   </categories>
   <modules>
-    <insertModule id="ProAppCoordConversionModule_Module" assembly="CoordinateConversion.dll" className="ProAppCoordConversionModule.Module1" autoLoad="false" caption="Module1">
+    <insertModule id="ProAppCoordConversionModule_Module" assembly="CoordinateConversion.dll" className="ProAppCoordConversionModule.Module1" autoLoad="false" caption="Coordinate Conversion">
       <groups>
         <!-- comment this out if you have no controls on the Addin tab to avoid
               an empty group-->
@@ -70,7 +75,7 @@
         </button>
       </controls>
       <dockPanes>
-        <dockPane id="ProAppCoordConversionModule_CoordinateConversionDockpane" caption="Coordinate Conversion" assembly="CoordinateConversion.dll" className="ProAppCoordConversionModule.CoordinateConversionDockpaneViewModel" keytip="DockPane" initiallyVisible="true" dock="group" dockWith="esri_core_contentsDockPane">
+        <dockPane id="ProAppCoordConversionModule_CoordinateConversionDockpane" caption="Coordinate Conversion" assembly="CoordinateConversion.dll" className="ProAppCoordConversionModule.CoordinateConversionDockpaneViewModel" dock="group" dockWith="esri_core_contentsDockPane">
           <content assembly="CoordinateConversion.dll" className="ProAppCoordConversionModule.CoordinateConversionDockpaneView" />
         </dockPane>
       </dockPanes>
@@ -86,7 +91,7 @@
         </menu>
       </menus>
     </insertModule>
-    <insertModule id="ProAppVisibilityModule_Module" assembly="Visibility.dll" className="ProAppVisibilityModule.VisibilityModule" autoLoad="false" caption="Module1">
+    <insertModule id="ProAppVisibilityModule_Module" assembly="Visibility.dll" className="ProAppVisibilityModule.VisibilityModule" autoLoad="false" caption="Visibility">
       <!-- uncomment to have the control hosted on a separate tab-->
       <tabs>
         <!--<tab id="ProAppVisibilityModule_Tab1" caption="New Tab">
@@ -120,7 +125,7 @@
         </tool>
       </controls>
       <dockPanes>
-        <dockPane id="ProAppVisibilityModule_VisibilityDockpane" caption="Visibility" assembly="Visibility.dll" className="ProAppVisibilityModule.VisibilityDockpaneViewModel" keytip="DockPane" initiallyVisible="true" dock="group" dockWith="esri_core_contentsDockPane">
+        <dockPane id="ProAppVisibilityModule_VisibilityDockpane" caption="Visibility" assembly="Visibility.dll" className="ProAppVisibilityModule.VisibilityDockpaneViewModel" dock="group" dockWith="esri_core_contentsDockPane">
           <content assembly="Visibility.dll" className="ProAppVisibilityModule.VisibilityDockpaneView" />
         </dockPane>
       </dockPanes>
@@ -200,9 +205,120 @@
         </menu>
       </menus>
     </insertModule>
-    <insertModule id="ProAppModuleMilitaryTools_Module" className="MilitaryToolsModule" autoLoad="true">
+    <insertModule id="ProAppModuleMilitaryTools_Module" assembly="MilitaryToolsForArcGISPro.dll" className="ProAppModuleMilitaryTools.MilitaryToolsModule" autoLoad="true" caption="Military Tools">
+      <controls>
+        <button id="ProAppModuleMilitaryTools_ConvertCoordinates_button" caption="Convert Coordinates" className="ProAppModuleMilitaryTools.ConvertCoordinates_button" loadOnClick="true" smallImage="Images\coordinate-conversion-16.png" largeImage="Images\coordinate-conversion-32.png">
+          <tooltip heading="Tooltip Heading">
+            Converts source coordinates in a table to multiple coordinate formats.<disabledText /></tooltip>
+        </button>
+        <button id="ProAppModuleMilitaryTools_TableTo2_PointLine_button" caption="TableTo 2 PointLine" className="ProAppModuleMilitaryTools.TableTo2_PointLine_button" loadOnClick="true" smallImage="Images\TableTo2PointLine16.png" largeImage="Images\TableTo2PointLine32.png">
+          <tooltip heading="Tooltip Heading">
+            Creates a line feature from start and end point coordinates.<disabledText /></tooltip>
+        </button>
+        <button id="ProAppModuleMilitaryTools_TableToEllipse_button" caption="Table To Ellipse" className="ProAppModuleMilitaryTools.TableToEllipse_button" loadOnClick="true" smallImage="Images\TableToEllipse16.png" largeImage="Images\TableToEllipse32.png">
+          <tooltip heading="Tooltip Heading">
+            Creates ellipse features from tabular coordinates and input data values.<disabledText /></tooltip>
+        </button>
+        <button id="ProAppModuleMilitaryTools_TableToLineofBearing_button" caption="Table To Line of Bearing" className="ProAppModuleMilitaryTools.TableToLineofBearing_button" loadOnClick="true" smallImage="Images\TableToLineOfBearing16.png" largeImage="Images\TableToLineOfBearing32.png">
+          <tooltip heading="Tooltip Heading">
+            Creates lines of bearing from tabular coordinates.
+            <disabledText /></tooltip>
+        </button>
+        <button id="ProAppModuleMilitaryTools_TableToPoint_button" caption="Table To Point" className="ProAppModuleMilitaryTools.TableToPoint_button" loadOnClick="true" smallImage="Images\TableToPoint16.png" largeImage="Images\TableToPoint32.png">
+          <tooltip heading="Tooltip Heading">
+            Creates point features from tabular coordinates.<disabledText /></tooltip>
+        </button>
+        <button id="ProAppModuleMilitaryTools_TabletoPolygon_button" caption="Table To Polygon" className="ProAppModuleMilitaryTools.TabletoPolygon_button" loadOnClick="true" smallImage="Images\TableToPolygon16.png" largeImage="Images\TableToPolygon32.png">
+          <tooltip heading="Tooltip Heading">
+            Creates polygon features from tabular coordinates.<disabledText /></tooltip>
+        </button>
+        <button id="ProAppModuleMilitaryTools_TabletoPolyline_button" caption="Table To Polyline" className="ProAppModuleMilitaryTools.TabletoPolyline_button" loadOnClick="true" smallImage="Images\TableToPolyline16.png" largeImage="Images\TableToPolyline32.png">
+          <tooltip heading="Tooltip Heading">
+            Creates polyline features from tabular coordinates.<disabledText /></tooltip>
+        </button>
+        <button id="ProAppModuleMilitaryTools_RangeRingsFromInterval_button" caption="Range Rings From Interval" className="ProAppModuleMilitaryTools.RangeRingsFromInterval_button" loadOnClick="true" smallImage="Images\RangeRingsFromInterval16.png" largeImage="Images\RangeRingsFromInterval32.png">
+          <tooltip heading="Tooltip Heading">
+            Creates concentric circles from a center, with a number of rings, and the distance between rings.<disabledText /></tooltip>
+        </button>
+        <button id="ProAppModuleMilitaryTools_RangeRingsFromMinimumandMaximum_button" caption="Range Rings From Minimum And Maximum" className="ProAppModuleMilitaryTools.RangeRingsFromMinimumandMaximum_button" loadOnClick="true" smallImage="Images\RangeRingsFromMinAndMax16.png" largeImage="Images\RangeRingsFromMinAndMax32.png">
+          <tooltip heading="Tooltip Heading">
+            Creates two concentric circles from a center, depicting a minimum range and a maximum range.<disabledText /></tooltip>
+        </button>
+        <button id="ProAppModuleMilitaryTools_RangeRingsFromMinimumandMaximumTable_button" caption="Range Rings From Minimum And Maximum Table" className="ProAppModuleMilitaryTools.RangeRingsFromMinimumandMaximumTable_button" loadOnClick="true" smallImage="Images\RangeRingsFromMinAndMaxTable16.png" largeImage="Images\RangeRingsFromMinAndMaxTable32.png">
+          <tooltip heading="Tooltip Heading">
+            Creates two concentric circles from a center, depicting a minimum range and a maximum range from a table.<disabledText /></tooltip>
+        </button>
+        <button id="ProAppModuleMilitaryTools_CreateGRGFromArea_button" caption="Create GRG From Area" className="ProAppModuleMilitaryTools.CreateGRGFromArea_button" loadOnClick="true" smallImage="Images\CreateGRGFromArea16.png" largeImage="Images\CreateGRGFromArea32.png">
+          <tooltip heading="Tooltip Heading">
+            Creates a Gridded Reference Graphic (GRG) over a specified area, with a custom size.<disabledText /></tooltip>
+        </button>
+        <button id="ProAppModuleMilitaryTools_CreateGRGFromPoint_button" caption="Create GRG From Point" className="ProAppModuleMilitaryTools.CreateGRGFromPoint_button" loadOnClick="true" smallImage="Images\CreateGRGFromPoint16.png" largeImage="Images\CreateGRGFromPoint32.png">
+          <tooltip heading="Tooltip Heading">
+            Creates a Gridded Reference Graphic (GRG) based on a point, with a custom size.<disabledText /></tooltip>
+        </button>
+        <button id="ProAppModuleMilitaryTools_CreateReferenceSystemGRGFromArea_button" caption="Create Reference System GRG From Area" className="ProAppModuleMilitaryTools.CreateReferenceSystemGRGFromArea_button" loadOnClick="true" smallImage="Images\CreateGRGFromAreaRefSystem16.png" largeImage="Images\CreateGRGFromAreaRefSystem32.png">
+          <tooltip heading="Tooltip Heading">
+            Creates a Gridded Reference Graphic (GRG) based on Military Grid Reference System (MGRS) or United States National Grid (USNG) reference grids.<disabledText /></tooltip>
+        </button>
+        <button id="ProAppModuleMilitaryTools_NumberFeatures_button" caption="Number Features" className="ProAppModuleMilitaryTools.NumberFeatures_button" loadOnClick="true" smallImage="Images\NumberFeatures16.png" largeImage="Images\NumberFeatures32.png">
+          <tooltip heading="Tooltip Heading">
+            Adds numbers to a field in an existing feature class.<disabledText /></tooltip>
+        </button>
+        <button id="ProAppModuleMilitaryTools_FindLocalPeaks_button" caption="Find Local Peaks" className="ProAppModuleMilitaryTools.FindLocalPeaks_button" loadOnClick="true" smallImage="Images\FindLocalPeaks16.png" largeImage="Images\FindLocalPeaks32.png">
+          <tooltip heading="Tooltip Heading">
+            Finds the highest local peaks within the defined area.<disabledText /></tooltip>
+        </button>
+        <button id="ProAppModuleMilitaryTools_HighestPoints_button" caption="Highest Points" className="ProAppModuleMilitaryTools.HighestPoints_button" loadOnClick="true" smallImage="Images\FindHighPoints16.png" largeImage="Images\FindHighPoints32.png">
+          <tooltip heading="Tooltip Heading">
+            Finds the highest point (or points) within a defined area.<disabledText /></tooltip>
+        </button>
+        <button id="ProAppModuleMilitaryTools_LinearLineofSight_button" caption="Linear Line of Sight" className="ProAppModuleMilitaryTools.LinearLineofSight_button" loadOnClick="true" smallImage="Images\LOSLinear16.png" largeImage="Images\LOSLinear32.png">
+          <tooltip heading="Tooltip Heading">
+            Creates lines of sight between observers and targets.<disabledText /></tooltip>
+        </button>
+        <button id="ProAppModuleMilitaryTools_LowestPoints_button" caption="Lowest Points" className="ProAppModuleMilitaryTools.LowestPoints_button" loadOnClick="true" smallImage="Images\FindLowestPoint16.png" largeImage="Images\FindLowestPoint32.png">
+          <tooltip heading="Tooltip Heading">
+            Finds the lowest point (or points) within a defined area.<disabledText /></tooltip>
+        </button>
+        <button id="ProAppModuleMilitaryTools_RadialLineofSight_button" caption="Radial Line of Sight" className="ProAppModuleMilitaryTools.RadialLineofSight_button" loadOnClick="true" smallImage="Images\LOSRadial16.png" largeImage="Images\LOSRadial32.png">
+          <tooltip heading="Tooltip Heading">
+            Shows the areas visible and not visible to an observer at a specified distance and viewing angle.<disabledText /></tooltip>
+        </button>
+        <button id="ProAppModuleMilitaryTools_RadialLineofSightandRange_button" caption="Radial Line of Sight And Range" className="ProAppModuleMilitaryTools.RadialLineofSightandRange_button" loadOnClick="true" smallImage="Images\LOSRadialAndRange16.png" largeImage="Images\LOSRadialAndRange32.png">
+          <tooltip heading="Tooltip Heading">
+            Shows view range and areas visible and not visible to an observer at a specified distance and viewing angle.<disabledText /></tooltip>
+        </button>
+      </controls>
       <groups>
-        <group id="ProAppMilitaryTools_Group0" caption="Military Tools">
+        <group id="ProAppMilitaryTools_Group0" caption="Conversion">
+          <button refID="ProAppModuleMilitaryTools_ConvertCoordinates_button" size="large" />
+          <button refID="ProAppModuleMilitaryTools_TableTo2_PointLine_button" size="large" />
+          <button refID="ProAppModuleMilitaryTools_TableToEllipse_button" size="large" />
+          <button refID="ProAppModuleMilitaryTools_TableToLineofBearing_button" size="large" />
+          <button refID="ProAppModuleMilitaryTools_TableToPoint_button" size="large" />
+          <button refID="ProAppModuleMilitaryTools_TabletoPolygon_button" size="large" />
+          <button refID="ProAppModuleMilitaryTools_TabletoPolyline_button" size="large" />
+        </group>
+        <group id="ProAppMilitaryTools_Group1" caption="Distance and Direction">
+          <button refID="ProAppModuleMilitaryTools_RangeRingsFromInterval_button" size="large" />
+          <button refID="ProAppModuleMilitaryTools_RangeRingsFromMinimumandMaximum_button" size="large" />
+          <button refID="ProAppModuleMilitaryTools_RangeRingsFromMinimumandMaximumTable_button" size="large" />
+        </group>
+        <group id="ProAppMilitaryTools_Group2" caption="Gridded Reference Graphic">
+          <button refID="ProAppModuleMilitaryTools_CreateGRGFromArea_button" size="large" />
+          <button refID="ProAppModuleMilitaryTools_CreateGRGFromPoint_button" size="large" />
+          <button refID="ProAppModuleMilitaryTools_CreateReferenceSystemGRGFromArea_button" size="large" />
+          <button refID="ProAppModuleMilitaryTools_NumberFeatures_button" size="large" />
+        </group>
+        <group id="ProAppMilitaryTools_Group3" caption="Visibility">
+          <button refID="ProAppModuleMilitaryTools_FindLocalPeaks_button" size="large" />
+          <button refID="ProAppModuleMilitaryTools_HighestPoints_button" size="large" />
+          <button refID="ProAppModuleMilitaryTools_LinearLineofSight_button" size="large" />
+          <button refID="ProAppModuleMilitaryTools_LowestPoints_button" size="large" />
+          <button refID="ProAppModuleMilitaryTools_RadialLineofSight_button" size="large" />
+          <button refID="ProAppModuleMilitaryTools_RadialLineofSightandRange_button" size="large" />
+        </group>
+        <group id="ProAppMilitaryTools_Group4" caption="Military Tools" keytip="MTB">
           <button refID="ProAppCoordConversionModule_CoordinateConversionDockpane_ShowButton" />
           <button refID="ProAppDistanceAndDirectionModule_DistanceAndDirectionDockpane_ShowButton" />
           <button refID="ProSymbolEditor_MilitarySymbolDockpane_ShowButton" />
@@ -211,11 +327,24 @@
       </groups>
       <tabs>
         <tab id="ProAppMilitaryTools_Tab0" caption="Military Tools" keytip="P">
-          <group refID="ProAppMilitaryTools_Group0" />
+          <group refID="ProAppMilitaryTools_Group4" />
         </tab>
       </tabs>
+      <galleries>
+        <gallery id="ProAppModuleMilitaryTools_MilitaryToolsGallery" caption="Military Tools" className="ProAppModuleMilitaryTools.MilitaryToolsGallery" itemsInRow="1" itemWidth="340" resizable="false" loadingMessage="Loading..." showGroup="true" showItemCaption="true" disableIfBusy="false" dataTemplateFile="pack://application:,,,/MilitaryToolsForArcGISPro;component//MilitaryToolsGalleryTemplate.xaml" templateID="MilitaryToolsGalleryItemTemplate" largeImage="Images\MilitaryWorkflows32.png" keytip="MT">
+          <tooltip heading="Military Tools">
+            A series of tools for Military Analysis<disabledText /></tooltip>
+        </gallery>
+      </galleries>
     </insertModule>
     <!-- Update the mapping module. Insert our custom button into the layers existing context menu. -->
+    <updateModule refID="esri_geoprocessing_module">
+      <groups>
+        <updateGroup refID="esri_geoprocessing_analysisTools">
+          <insertGallery refID="ProAppModuleMilitaryTools_MilitaryToolsGallery" size="large" placeWith="esri_geoprocessingGallery" insert="after" />
+        </updateGroup>
+      </groups>
+    </updateModule>
     <updateModule refID="esri_mapping">
       <menus>
         <updateMenu refID="esri_mapping_selection2DContextMenu">

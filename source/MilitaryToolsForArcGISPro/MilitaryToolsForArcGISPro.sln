@@ -1,6 +1,7 @@
-﻿Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2041
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MilitaryToolsForArcGISPro", "MilitaryToolsForArcGISPro.csproj", "{F13AA05B-70CC-4354-A174-E0BDE382F971}"
 EndProject
@@ -16,7 +17,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisibilityLibrary", "..\..\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProAppVisibilityModule", "..\..\..\visibility-addin-dotnet\source\addins\ProAppVisibilityModule\ProAppVisibilityModule.csproj", "{4DE1A8A8-BCA3-40C7-8929-041023F2D3E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProSymbolEditor", "..\..\..\military-symbol-editor-addin-wpf\source\ProSymbolEditor\ProSymbolEditor.csproj", "{4FF462B0-2910-47F3-B6FD-D1D17E5F7DFC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProSymbolEditor", "..\..\..\military-symbology\source\ProSymbolEditor\ProSymbolEditor.csproj", "{4FF462B0-2910-47F3-B6FD-D1D17E5F7DFC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,5 +60,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4232C7A4-3A52-49F4-93DB-FC7FAE29632D}
 	EndGlobalSection
 EndGlobal
