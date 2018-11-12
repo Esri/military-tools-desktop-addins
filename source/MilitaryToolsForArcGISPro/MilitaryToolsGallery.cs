@@ -172,7 +172,11 @@ namespace ProAppModuleMilitaryTools
 
 		public static Boolean Analyst3DEnabled => LicenseInformation.IsAvailable(LicenseCodes.Analyst3D);
 
-		public static bool SystemToolsAvailable { get => systemToolsAvailable; set => systemToolsAvailable = value; }
+		public static bool SystemToolsAvailable 
+		{ 
+                    get { return systemToolsAvailable; }
+                    set { systemToolsAvailable = value; }			
+		}
 
 		private static Boolean systemToolsAvailable;
 
