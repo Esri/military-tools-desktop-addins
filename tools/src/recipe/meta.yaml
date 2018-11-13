@@ -17,6 +17,9 @@ package:
   name: militarytools
   version: {{ data.get('version') }}
 
+source:
+  path: ..
+
 build:
     # https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#script
     script: python setup.py install --single-version-externally-managed --record=record.txt
@@ -34,4 +37,3 @@ about:
   home: {{ data.get('url') }}
   license: {{ data.get('license') }}
   summary: {{ data.get('description') }}
-  
