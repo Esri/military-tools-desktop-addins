@@ -121,7 +121,7 @@ namespace ProAppModuleMilitaryTools
 	{
 		public static string AssemblyInstallPath => Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
 		public static string CAToolboxAlias => "mt";
-		public static string CAToolboxPath => Path.Combine(AssemblyInstallPath, "src", "militarytools", "esri", "toolboxes", "Military Tools.pyt");
+		public static string CAToolboxPath => Path.Combine(AssemblyInstallPath, "src", "Military Tools.pyt");
 		public static void OpenCustomGPTool(string systoolboxalias, string systoolalias, IEnumerable<string> args)
 		{
 			if (AddIn.SystemToolsAvailable)
