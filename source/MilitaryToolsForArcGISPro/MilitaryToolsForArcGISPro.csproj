@@ -528,7 +528,7 @@
       <Link>src\militarytools\esri\toolboxes\Military Tools.pyt</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="..\..\tools\src\recipe\ca-conda-build.bat">
+    <None Include="..\..\tools\src\recipe\mt-conda-build.bat">
       <Link>src\recipe\ca-conda-build.bat</Link>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -1130,6 +1130,6 @@
     <XmlPoke XmlInputPath="Config.daml" Query="/x:ArcGIS/x:AddInInfo/x:Date" Namespaces="&lt;Namespace Prefix='x' Uri='http://schemas.esri.com/DADF/Registry' /&gt;" Value="$(BUILD_DATE)" />
   </Target>
   <PropertyGroup>
-    <PostBuildEvent>call $(TargetDir)src\recipe\ca-conda-build.bat</PostBuildEvent>
+    <PostBuildEvent>call $(TargetDir)src\recipe\mt-conda-build.bat</PostBuildEvent>
   </PropertyGroup>
 </Project>
