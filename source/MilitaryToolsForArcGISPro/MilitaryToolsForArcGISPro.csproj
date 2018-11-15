@@ -128,8 +128,8 @@
     <AddInContent Include="Images\GenericButtonRed32.png" />
   </ItemGroup>
   <ItemGroup>
-  <Content Include="..\..\tools\**\*.*">
-		<Link>%(RecursiveDir)%(Filename)%(Extension)</Link>
+  <Content Include="..\..\..\military-tools-geoprocessing-toolbox\Geoprocessing\**\*.*">
+		<Link>Geoprocessing\%(RecursiveDir)%(Filename)%(Extension)</Link>
 		<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="app.config" />

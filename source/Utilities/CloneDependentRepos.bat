@@ -9,3 +9,4 @@ git clone -b dev https://github.com/Esri/coordinate-conversion-addin-dotnet
 git clone -b dev https://github.com/Esri/distance-direction-addin-dotnet.git
 git clone -b dev https://github.com/Esri/military-symbology.git
 git clone -b dev https://github.com/Esri/visibility-addin-dotnet
+git clone -b dev https://github.com/Esri/military-tools-geoprocessing-toolbox.git
