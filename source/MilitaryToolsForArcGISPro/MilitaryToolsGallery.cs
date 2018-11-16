@@ -34,6 +34,7 @@ namespace ProAppModuleMilitaryTools
             {
                 if (_isInitialized)
                     return;
+                this.AlwaysFireOnClick = true;
                 var commandsConversion = new List<string>() {
                 "ProAppModuleMilitaryTools_ConvertCoordinates_button",
                 "ProAppModuleMilitaryTools_TableTo2_PointLine_button",
@@ -100,6 +101,7 @@ namespace ProAppModuleMilitaryTools
                       (ImageSource)wrapper.LargeImage ?? (ImageSource)wrapper.SmallImage,
                       wrapper.Tooltip.Split(new string[] { "\n" }, StringSplitOptions.None).First(), headerName.Caption));
                 }
+
                 _isInitialized = true;
             }
             catch (Exception ex)
@@ -114,6 +116,7 @@ namespace ProAppModuleMilitaryTools
             var command = ((TaggedGalleryItem)item).Command as ICommand;
             if (command != null)
                 command.Execute(null);
+            this.SelectedItem = null;
         }
     }
 
