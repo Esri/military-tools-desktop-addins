@@ -53,7 +53,9 @@ Military Tools for ArcGIS is a collection of mission-focused enhancements to sim
 	* [coordinate-conversion-addin-dotnet](https://github.com/Esri/coordinate-conversion-addin-dotnet)
 	* [distance-direction-addin-dotnet](https://github.com/Esri/distance-direction-addin-dotnet)
 	* [military-symbology](https://github.com/Esri/military-symbology)
+	* [military-tools-geoprocessing-toolbox](https://github.com/Esri/military-tools-geoprocessing-toolbox)
 	* [visibility-addin-dotnet](https://github.com/Esri/visibility-addin-dotnet)
+
 * Your local folder structure should now look like:
 
 ```
