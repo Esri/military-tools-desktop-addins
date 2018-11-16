@@ -128,9 +128,9 @@
     <AddInContent Include="Images\GenericButtonRed32.png" />
   </ItemGroup>
   <ItemGroup>
-  <Content Include="..\..\..\military-tools-geoprocessing-toolbox\tools\militarytools\esri\toolboxes\**\*.*">
-		<Link>toolboxes\%(RecursiveDir)%(Filename)%(Extension)</Link>
-		<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    <Content Include="..\..\..\military-tools-geoprocessing-toolbox\tools\militarytools\esri\toolboxes\**\*.*">
+      <Link>toolboxes\%(RecursiveDir)%(Filename)%(Extension)</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <None Include="app.config" />
   </ItemGroup>
@@ -189,7 +189,7 @@
     <AddInContent Include="DarkImages\visibility-32.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="MilitaryToolsGalleryTemplate.xaml">
+    <Resource Include="MilitaryToolsGalleryItemTemplate.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Resource>

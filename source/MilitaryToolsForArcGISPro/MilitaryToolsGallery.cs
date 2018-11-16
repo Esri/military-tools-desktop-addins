@@ -239,7 +239,7 @@ namespace ProAppModuleMilitaryTools
 		protected override void OnClick()
 		{
 			var args = AddIn.TOCArgs() != null ? Geoprocessing.MakeValueArray(AddIn.TOCArgs()) : Geoprocessing.MakeValueArray();
-			AddIn.OpenCustomGPTool(AddIn.MTToolboxAlias, Constants.TableToPolyline, args);
+			AddIn.OpenCustomGPTool(AddIn.MTToolboxAlias, Constants.TableToPolygon, args);
 		}
 	}
 	internal class TabletoPolyline_button : Button
@@ -362,8 +362,9 @@ namespace ProAppModuleMilitaryTools
 		public const string TableToEllipse = "TableToEllipse";
 		public const string TableToLineOfBearing = "TableToLineOfBearing";
 		public const string TableToPoint = "TableToPoint";
-		public const string TableToPolyline = "TableToPolyline";
-		public const string RangeRingsFromInterval = "RangeRingsFromInterval";
+        public const string TableToPolygon = "TableToPolygon";
+        public const string TableToPolyline = "TableToPolyline";
+        public const string RangeRingsFromInterval = "RangeRingsFromInterval";
 		public const string RangeRingFromMinimumAndMaximum = "RangeRingFromMinimumAndMaximum";
 		public const string RangeRingsFromMinAndMaxTable = "RangeRingsFromMinAndMaxTable";
 		public const string CreateGRGFromArea = "CreateGRGFromArea";

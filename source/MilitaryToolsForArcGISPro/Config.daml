@@ -331,7 +331,7 @@
         </tab>
       </tabs>
       <galleries>
-        <gallery id="ProAppModuleMilitaryTools_MilitaryToolsGallery" caption="Military Tools" className="ProAppModuleMilitaryTools.MilitaryToolsGallery" itemsInRow="1" itemWidth="340" resizable="false" loadingMessage="Loading..." showGroup="true" showItemCaption="true" disableIfBusy="false" dataTemplateFile="pack://application:,,,/MilitaryToolsForArcGISPro;component//MilitaryToolsGalleryTemplate.xaml" templateID="MilitaryToolsGalleryItemTemplate" largeImage="Images\MilitaryWorkflows32.png" keytip="MT">
+        <gallery id="ProAppModuleMilitaryTools_MilitaryToolsGallery" caption="Military Tools" className="ProAppModuleMilitaryTools.MilitaryToolsGallery" itemsInRow="1" itemWidth="340" resizable="false" loadingMessage="Loading..." showGroup="true" showItemCaption="true" disableIfBusy="false" dataTemplateFile="pack://application:,,,/MilitaryToolsForArcGISPro;component//MilitaryToolsGalleryItemTemplate.xaml" templateID="MilitaryToolsGalleryItemTemplate" largeImage="Images\MilitaryWorkflows32.png" keytip="MT">
           <tooltip heading="Military Tools">
             A series of tools for Military Analysis<disabledText /></tooltip>
         </gallery>
