@@ -120,8 +120,8 @@ namespace ProAppModuleMilitaryTools
 	internal static class AddIn
 	{
 		public static string AssemblyInstallPath => Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
-		public static string CAToolboxAlias => "mt";
-		public static string CAToolboxPath => Path.Combine(AssemblyInstallPath, "Geoprocessing", "Military Tools.pyt");
+		public static string MTToolboxAlias => "mt";
+		public static string MTToolboxPath => Path.Combine(AssemblyInstallPath, "toolboxes", "Military Tools.pyt");
 		public static void OpenCustomGPTool(string systoolboxalias, string systoolalias, IEnumerable<string> args)
 		{
 			if (AddIn.SystemToolsAvailable)
@@ -132,9 +132,9 @@ namespace ProAppModuleMilitaryTools
 			else
 			{
 				//if exception Open tools from AssemblyCache Instead
-				if (systoolboxalias == CAToolboxAlias)
+				if (systoolboxalias == MTToolboxAlias)
 				{
-					Geoprocessing.OpenToolDialog(CAToolboxPath + "\\" + systoolalias, args);
+					Geoprocessing.OpenToolDialog(MTToolboxPath + "\\" + systoolalias, args);
 				}
 			}
 		}
@@ -199,7 +199,7 @@ namespace ProAppModuleMilitaryTools
 		protected override void OnClick()
 		{
 			var args = AddIn.TOCArgs() != null ? Geoprocessing.MakeValueArray(AddIn.TOCArgs()) : Geoprocessing.MakeValueArray();
-			AddIn.OpenCustomGPTool(AddIn.CAToolboxAlias, Constants.ConvertCoordinates, args);
+			AddIn.OpenCustomGPTool(AddIn.MTToolboxAlias, Constants.ConvertCoordinates, args);
 		}		
 	}
 	internal class TableTo2_PointLine_button : Button
@@ -207,7 +207,7 @@ namespace ProAppModuleMilitaryTools
 		protected override void OnClick()
 		{
 			var args = AddIn.TOCArgs() != null ? Geoprocessing.MakeValueArray(AddIn.TOCArgs()) : Geoprocessing.MakeValueArray();
-			AddIn.OpenCustomGPTool(AddIn.CAToolboxAlias, Constants.TableTo2PointLine, args);
+			AddIn.OpenCustomGPTool(AddIn.MTToolboxAlias, Constants.TableTo2PointLine, args);
 		}
 	}
 	internal class TableToEllipse_button : Button
@@ -215,7 +215,7 @@ namespace ProAppModuleMilitaryTools
 		protected override void OnClick()
 		{
 			var args = AddIn.TOCArgs() != null ? Geoprocessing.MakeValueArray(AddIn.TOCArgs()) : Geoprocessing.MakeValueArray();
-			AddIn.OpenCustomGPTool(AddIn.CAToolboxAlias, Constants.TableToEllipse, args);
+			AddIn.OpenCustomGPTool(AddIn.MTToolboxAlias, Constants.TableToEllipse, args);
 		}
 	}
 	internal class TableToLineofBearing_button : Button
@@ -223,7 +223,7 @@ namespace ProAppModuleMilitaryTools
 		protected override void OnClick()
 		{
 			var args = AddIn.TOCArgs() != null ? Geoprocessing.MakeValueArray(AddIn.TOCArgs()) : Geoprocessing.MakeValueArray();
-			AddIn.OpenCustomGPTool(AddIn.CAToolboxAlias, Constants.TableToLineOfBearing, args);
+			AddIn.OpenCustomGPTool(AddIn.MTToolboxAlias, Constants.TableToLineOfBearing, args);
 		}
 	}
 	internal class TableToPoint_button : Button
@@ -231,7 +231,7 @@ namespace ProAppModuleMilitaryTools
 		protected override void OnClick()
 		{
 			var args = AddIn.TOCArgs() != null ? Geoprocessing.MakeValueArray(AddIn.TOCArgs()) : Geoprocessing.MakeValueArray();
-			AddIn.OpenCustomGPTool(AddIn.CAToolboxAlias, Constants.TableToPoint, args);
+			AddIn.OpenCustomGPTool(AddIn.MTToolboxAlias, Constants.TableToPoint, args);
 		}
 	}
 	internal class TabletoPolygon_button : Button
@@ -239,7 +239,7 @@ namespace ProAppModuleMilitaryTools
 		protected override void OnClick()
 		{
 			var args = AddIn.TOCArgs() != null ? Geoprocessing.MakeValueArray(AddIn.TOCArgs()) : Geoprocessing.MakeValueArray();
-			AddIn.OpenCustomGPTool(AddIn.CAToolboxAlias, Constants.TableToPolyline, args);
+			AddIn.OpenCustomGPTool(AddIn.MTToolboxAlias, Constants.TableToPolyline, args);
 		}
 	}
 	internal class TabletoPolyline_button : Button
@@ -247,7 +247,7 @@ namespace ProAppModuleMilitaryTools
 		protected override void OnClick()
 		{
 			var args = AddIn.TOCArgs() != null ? Geoprocessing.MakeValueArray(AddIn.TOCArgs()) : Geoprocessing.MakeValueArray();
-			AddIn.OpenCustomGPTool(AddIn.CAToolboxAlias, Constants.TableToPolyline, args);
+			AddIn.OpenCustomGPTool(AddIn.MTToolboxAlias, Constants.TableToPolyline, args);
 		}
 	}
 
@@ -256,7 +256,7 @@ namespace ProAppModuleMilitaryTools
 		protected override void OnClick()
 		{
 			var args = AddIn.TOCArgs() != null ? Geoprocessing.MakeValueArray(AddIn.TOCArgs()) : Geoprocessing.MakeValueArray();
-			AddIn.OpenCustomGPTool(AddIn.CAToolboxAlias, Constants.RangeRingsFromInterval, args);
+			AddIn.OpenCustomGPTool(AddIn.MTToolboxAlias, Constants.RangeRingsFromInterval, args);
 		}
 	}
 	internal class RangeRingsFromMinimumandMaximum_button : Button
@@ -264,7 +264,7 @@ namespace ProAppModuleMilitaryTools
 		protected override void OnClick()
 		{
 			var args = AddIn.TOCArgs() != null ? Geoprocessing.MakeValueArray(AddIn.TOCArgs()) : Geoprocessing.MakeValueArray();
-			AddIn.OpenCustomGPTool(AddIn.CAToolboxAlias, Constants.RangeRingFromMinimumAndMaximum, args);
+			AddIn.OpenCustomGPTool(AddIn.MTToolboxAlias, Constants.RangeRingFromMinimumAndMaximum, args);
 		}
 	}
 	internal class RangeRingsFromMinimumandMaximumTable_button : Button
@@ -272,7 +272,7 @@ namespace ProAppModuleMilitaryTools
 		protected override void OnClick()
 		{
 			var args = AddIn.TOCArgs() != null ? Geoprocessing.MakeValueArray(AddIn.TOCArgs()) : Geoprocessing.MakeValueArray();
-			AddIn.OpenCustomGPTool(AddIn.CAToolboxAlias, Constants.RangeRingsFromMinAndMaxTable, args);
+			AddIn.OpenCustomGPTool(AddIn.MTToolboxAlias, Constants.RangeRingsFromMinAndMaxTable, args);
 		}
 	}
 	internal class CreateGRGFromArea_button : Button
@@ -280,7 +280,7 @@ namespace ProAppModuleMilitaryTools
 		protected override void OnClick()
 		{
 			var args = AddIn.TOCArgs() != null ? Geoprocessing.MakeValueArray(AddIn.TOCArgs()) : Geoprocessing.MakeValueArray();
-			AddIn.OpenCustomGPTool(AddIn.CAToolboxAlias, Constants.CreateGRGFromArea, args);
+			AddIn.OpenCustomGPTool(AddIn.MTToolboxAlias, Constants.CreateGRGFromArea, args);
 		}
 	}
 	internal class CreateGRGFromPoint_button : Button
@@ -288,7 +288,7 @@ namespace ProAppModuleMilitaryTools
 		protected override void OnClick()
 		{
 			var args = AddIn.TOCArgs() != null ? Geoprocessing.MakeValueArray(AddIn.TOCArgs()) : Geoprocessing.MakeValueArray();
-			AddIn.OpenCustomGPTool(AddIn.CAToolboxAlias, Constants.CreateGRGFromPoint, args);
+			AddIn.OpenCustomGPTool(AddIn.MTToolboxAlias, Constants.CreateGRGFromPoint, args);
 		}
 	}
 	internal class CreateReferenceSystemGRGFromArea_button : Button
@@ -296,7 +296,7 @@ namespace ProAppModuleMilitaryTools
 		protected override void OnClick()
 		{
 			var args = AddIn.TOCArgs() != null ? Geoprocessing.MakeValueArray(AddIn.TOCArgs()) : Geoprocessing.MakeValueArray();
-			AddIn.OpenCustomGPTool(AddIn.CAToolboxAlias, Constants.CreateReferenceSystemGRGFromArea, args);
+			AddIn.OpenCustomGPTool(AddIn.MTToolboxAlias, Constants.CreateReferenceSystemGRGFromArea, args);
 		}
 	}
 	internal class NumberFeatures_button : Button
@@ -304,7 +304,7 @@ namespace ProAppModuleMilitaryTools
 		protected override void OnClick()
 		{
 			var args = AddIn.TOCArgs() != null ? Geoprocessing.MakeValueArray(AddIn.TOCArgs()) : Geoprocessing.MakeValueArray();
-			AddIn.OpenCustomGPTool(AddIn.CAToolboxAlias, Constants.NumberFeatures, args);
+			AddIn.OpenCustomGPTool(AddIn.MTToolboxAlias, Constants.NumberFeatures, args);
 		}
 	}
 	internal class FindLocalPeaks_button : Button
@@ -312,7 +312,7 @@ namespace ProAppModuleMilitaryTools
 		protected override void OnClick()
 		{
 			var args = AddIn.TOCArgs() != null ? Geoprocessing.MakeValueArray(AddIn.TOCArgs()) : Geoprocessing.MakeValueArray();
-			AddIn.OpenCustomGPTool(AddIn.CAToolboxAlias, Constants.FindLocalPeaks, args);
+			AddIn.OpenCustomGPTool(AddIn.MTToolboxAlias, Constants.FindLocalPeaks, args);
 		}
 	}
 	internal class HighestPoints_button : Button
@@ -320,7 +320,7 @@ namespace ProAppModuleMilitaryTools
 		protected override void OnClick()
 		{
 			var args = AddIn.TOCArgs() != null ? Geoprocessing.MakeValueArray(AddIn.TOCArgs()) : Geoprocessing.MakeValueArray();
-			AddIn.OpenCustomGPTool(AddIn.CAToolboxAlias, Constants.HighestPoints, args);
+			AddIn.OpenCustomGPTool(AddIn.MTToolboxAlias, Constants.HighestPoints, args);
 		}
 	}
 	internal class LinearLineofSight_button : Button
@@ -328,7 +328,7 @@ namespace ProAppModuleMilitaryTools
 		protected override void OnClick()
 		{
 			var args = AddIn.TOCArgs() != null ? Geoprocessing.MakeValueArray(AddIn.TOCArgs()) : Geoprocessing.MakeValueArray();
-			AddIn.OpenCustomGPTool(AddIn.CAToolboxAlias, Constants.LinearLineOfSight, args);
+			AddIn.OpenCustomGPTool(AddIn.MTToolboxAlias, Constants.LinearLineOfSight, args);
 		}
 	}
 	internal class LowestPoints_button : Button
@@ -336,7 +336,7 @@ namespace ProAppModuleMilitaryTools
 		protected override void OnClick()
 		{
 			var args = AddIn.TOCArgs() != null ? Geoprocessing.MakeValueArray(AddIn.TOCArgs()) : Geoprocessing.MakeValueArray();
-			AddIn.OpenCustomGPTool(AddIn.CAToolboxAlias, Constants.LowestPoints, args);
+			AddIn.OpenCustomGPTool(AddIn.MTToolboxAlias, Constants.LowestPoints, args);
 		}
 	}
 	internal class RadialLineofSight_button : Button
@@ -344,7 +344,7 @@ namespace ProAppModuleMilitaryTools
 		protected override void OnClick()
 		{
 			var args = AddIn.TOCArgs() != null ? Geoprocessing.MakeValueArray(AddIn.TOCArgs()) : Geoprocessing.MakeValueArray();
-			AddIn.OpenCustomGPTool(AddIn.CAToolboxAlias, Constants.RadialLineOfSight, args);
+			AddIn.OpenCustomGPTool(AddIn.MTToolboxAlias, Constants.RadialLineOfSight, args);
 		}
 	}
 	internal class RadialLineofSightandRange_button : Button
@@ -352,7 +352,7 @@ namespace ProAppModuleMilitaryTools
 		protected override void OnClick()
 		{
 			var args = AddIn.TOCArgs() != null ? Geoprocessing.MakeValueArray(AddIn.TOCArgs()) : Geoprocessing.MakeValueArray();
-			AddIn.OpenCustomGPTool(AddIn.CAToolboxAlias, Constants.RadialLineOfSightAndRange, args);
+			AddIn.OpenCustomGPTool(AddIn.MTToolboxAlias, Constants.RadialLineOfSightAndRange, args);
 		}
 	}
 	public class Constants
