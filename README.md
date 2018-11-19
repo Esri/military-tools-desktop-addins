@@ -29,6 +29,7 @@ Military Tools for ArcGIS is a collection of mission-focused enhancements to sim
 
 * Visual Studio 2015
     * Important Note: Visual Studio 2013 is required if building on ArcGIS 10.3.1
+    * If you wish to load and view the Python project file `military-tools-geoprocessing-toolbox.pyproj` you should install the Python Tools for Visual Studio (PTVS) Extension when prompted. This project or extension is not required to build the addins.
 * ArcGIS for Desktop 
 	* ArcMap 10.3.1+
 	* ArcGIS Pro 2.1+
