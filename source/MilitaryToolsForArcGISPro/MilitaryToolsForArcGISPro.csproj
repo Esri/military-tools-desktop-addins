@@ -53,7 +53,16 @@
     <PlatformTarget>AnyCPU</PlatformTarget>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ArcGIS.Desktop.GeoProcessing">
+      <HintPath>..\..\..\..\..\..\..\Program Files\ArcGIS\Pro\bin\Extensions\GeoProcessing\ArcGIS.Desktop.GeoProcessing.dll</HintPath>
+    </Reference>
+    <Reference Include="ArcGIS.Desktop.Ribbon.Wpf">
+      <HintPath>..\..\..\..\..\Program Files\ArcGIS\Pro\bin\ArcGIS.Desktop.Ribbon.Wpf.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Windows" />
@@ -97,13 +106,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <AddInContent Include="Config.daml" />
+    <AddInContent Include="Config.daml">
+      <SubType>Designer</SubType>
+    </AddInContent>
     <AddInContent Include="Images\AddInDesktop16.png" />
     <AddInContent Include="Images\AddInDesktop32.png" />
     <AddInContent Include="DarkImages\AddInDesktop16.png" />
     <AddInContent Include="DarkImages\AddInDesktop32.png" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MilitaryToolsGallery.cs" />
     <Compile Include="MilitaryToolsModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -116,6 +128,10 @@
     <AddInContent Include="Images\GenericButtonRed32.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="..\..\..\military-tools-geoprocessing-toolbox\tools\militarytools\esri\toolboxes\**\*.*">
+      <Link>toolboxes\%(RecursiveDir)%(Filename)%(Extension)</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
@@ -135,7 +151,7 @@
       <Project>{ab2934c1-011a-49fe-bd1c-9368cce0358e}</Project>
       <Name>ProAppDistanceAndDirectionModule</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\military-symbol-editor-addin-wpf\source\ProSymbolEditor\ProSymbolEditor.csproj">
+    <ProjectReference Include="..\..\..\military-symbology\source\ProSymbolEditor\ProSymbolEditor.csproj">
       <Project>{4ff462b0-2910-47f3-b6fd-d1d17e5f7dfc}</Project>
       <Name>ProSymbolEditor</Name>
     </ProjectReference>
@@ -172,6 +188,107 @@
     <AddInContent Include="DarkImages\visibility-16.png" />
     <AddInContent Include="DarkImages\visibility-32.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="MilitaryToolsGalleryItemTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <AddInContent Include="DarkImages\MilitaryWorkflows16.png" />
+    <AddInContent Include="DarkImages\MilitaryWorkflows32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AddInContent Include="Images\MilitaryWorkflows16.png" />
+    <AddInContent Include="Images\MilitaryWorkflows32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AddInContent Include="DarkImages\CreateGRGFromArea16.png" />
+    <AddInContent Include="DarkImages\CreateGRGFromArea32.png" />
+    <AddInContent Include="DarkImages\CreateGRGFromAreaRefSystem16.png" />
+    <AddInContent Include="DarkImages\CreateGRGFromAreaRefSystem32.png" />
+    <AddInContent Include="DarkImages\CreateGRGFromPoint16.png" />
+    <AddInContent Include="DarkImages\CreateGRGFromPoint32.png" />
+    <AddInContent Include="DarkImages\FindHighPoints16.png" />
+    <AddInContent Include="DarkImages\FindHighPoints32.png" />
+    <AddInContent Include="DarkImages\FindLocalPeaks16.png" />
+    <AddInContent Include="DarkImages\FindLocalPeaks32.png" />
+    <AddInContent Include="DarkImages\FindLowestPoint16.png" />
+    <AddInContent Include="DarkImages\FindLowestPoint32.png" />
+    <AddInContent Include="DarkImages\LOSLinear16.png" />
+    <AddInContent Include="DarkImages\LOSLinear32.png" />
+    <AddInContent Include="DarkImages\LOSRadial16.png" />
+    <AddInContent Include="DarkImages\LOSRadial32.png" />
+    <AddInContent Include="DarkImages\LOSRadialAndRange16.png" />
+    <AddInContent Include="DarkImages\LOSRadialAndRange32.png" />
+    <AddInContent Include="DarkImages\NumberFeatures16.png" />
+    <AddInContent Include="DarkImages\NumberFeatures32.png" />
+    <AddInContent Include="DarkImages\RangeRingsFromInterval16.png" />
+    <AddInContent Include="DarkImages\RangeRingsFromInterval32.png" />
+    <AddInContent Include="DarkImages\RangeRingsFromMinAndMax16.png" />
+    <AddInContent Include="DarkImages\RangeRingsFromMinAndMax32.png" />
+    <AddInContent Include="DarkImages\RangeRingsFromMinAndMaxTable16.png" />
+    <AddInContent Include="DarkImages\RangeRingsFromMinAndMaxTable32.png" />
+    <AddInContent Include="DarkImages\TableTo2PointLine16.png" />
+    <AddInContent Include="DarkImages\TableTo2PointLine32.png" />
+    <AddInContent Include="DarkImages\TableToEllipse16.png" />
+    <AddInContent Include="DarkImages\TableToEllipse32.png" />
+    <AddInContent Include="DarkImages\TableToLineOfBearing16.png" />
+    <AddInContent Include="DarkImages\TableToLineOfBearing32.png" />
+    <AddInContent Include="DarkImages\TableToPoint16.png" />
+    <AddInContent Include="DarkImages\TableToPoint32.png" />
+    <AddInContent Include="DarkImages\TableToPolygon16.png" />
+    <AddInContent Include="DarkImages\TableToPolygon32.png" />
+    <AddInContent Include="DarkImages\TableToPolyline16.png" />
+    <AddInContent Include="DarkImages\TableToPolyline32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AddInContent Include="Images\CreateGRGFromArea16.png" />
+    <AddInContent Include="Images\CreateGRGFromArea32.png" />
+    <AddInContent Include="Images\CreateGRGFromAreaRefSystem16.png" />
+    <AddInContent Include="Images\CreateGRGFromAreaRefSystem32.png" />
+    <AddInContent Include="Images\CreateGRGFromPoint16.png" />
+    <AddInContent Include="Images\CreateGRGFromPoint32.png" />
+    <AddInContent Include="Images\FindHighPoints16.png" />
+    <AddInContent Include="Images\FindHighPoints32.png" />
+    <AddInContent Include="Images\FindLocalPeaks16.png" />
+    <AddInContent Include="Images\FindLocalPeaks32.png" />
+    <AddInContent Include="Images\FindLowestPoint16.png" />
+    <AddInContent Include="Images\FindLowestPoint32.png" />
+    <AddInContent Include="Images\LOSLinear16.png" />
+    <AddInContent Include="Images\LOSLinear32.png" />
+    <AddInContent Include="Images\LOSRadial16.png" />
+    <AddInContent Include="Images\LOSRadial32.png" />
+    <AddInContent Include="Images\LOSRadialAndRange16.png" />
+    <AddInContent Include="Images\LOSRadialAndRange32.png" />
+    <AddInContent Include="Images\NumberFeatures16.png" />
+    <AddInContent Include="Images\NumberFeatures32.png" />
+    <AddInContent Include="Images\RangeRingsFromInterval16.png" />
+    <AddInContent Include="Images\RangeRingsFromInterval32.png" />
+    <AddInContent Include="Images\RangeRingsFromMinAndMax16.png" />
+    <AddInContent Include="Images\RangeRingsFromMinAndMax32.png" />
+    <AddInContent Include="Images\RangeRingsFromMinAndMaxTable16.png" />
+    <AddInContent Include="Images\RangeRingsFromMinAndMaxTable32.png" />
+    <AddInContent Include="Images\TableTo2PointLine16.png" />
+    <AddInContent Include="Images\TableTo2PointLine32.png" />
+    <AddInContent Include="Images\TableToEllipse16.png" />
+    <AddInContent Include="Images\TableToEllipse32.png" />
+    <AddInContent Include="Images\TableToLineOfBearing16.png" />
+    <AddInContent Include="Images\TableToLineOfBearing32.png" />
+    <AddInContent Include="Images\TableToPoint16.png" />
+    <AddInContent Include="Images\TableToPoint32.png" />
+    <AddInContent Include="Images\TableToPolygon16.png" />
+    <AddInContent Include="Images\TableToPolygon32.png" />
+    <AddInContent Include="Images\TableToPolyline16.png" />
+    <AddInContent Include="Images\TableToPolyline32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AddInContent Include="DarkImages\GenericButtonBlue16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AddInContent Include="DarkImages\GenericButtonBlue32.png" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <UsingTask AssemblyFile="C:\Program Files\ArcGIS\Pro\bin\proapp-sdk-MSBuild.dll" TaskName="proapp_sdk_MSBuild.PackageAddIn" />
   <UsingTask AssemblyFile="C:\Program Files\ArcGIS\Pro\bin\proapp-sdk-MSBuild.dll" TaskName="proapp_sdk_MSBuild.CleanAddIn" />

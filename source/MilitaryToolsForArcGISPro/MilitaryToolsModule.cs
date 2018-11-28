@@ -12,8 +12,12 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using ArcGIS.Desktop.Core.Events;
 using ArcGIS.Desktop.Framework;
 using ArcGIS.Desktop.Framework.Contracts;
+using System.Threading.Tasks;
+using ArcGIS.Desktop.Internal.GeoProcessing;
+using System.Linq;
 
 namespace ProAppModuleMilitaryTools
 {
@@ -44,7 +48,40 @@ namespace ProAppModuleMilitaryTools
             return true;
         }
 
-        #endregion Overrides
+		protected override bool Initialize()
+		{
+			ProjectOpenedEvent.Subscribe(OnProjectOpened);
+            //ProjectOpenedAsyncEvent.Subscribe(OnProjectOpenedAsync);
+            return base.Initialize();
+		}
 
-    }
+		private void OnProjectOpened(ProjectEventArgs args)
+		{
+			AddIn.ToggleState();			
+		}
+
+		private async Task OnProjectOpenedAsync(ProjectEventArgs args)
+		{
+			var tools = await SearchTools.SearchAsync(Constants.RadialLineOfSightAndRange);
+			string searchResult = tools.ElementAt(0).ToString();
+			if (searchResult.Contains(Constants.RadialLineOfSightAndRange))
+			{
+				AddIn.SystemToolsAvailable = true;
+			}
+			else
+			{
+				AddIn.SystemToolsAvailable = false;
+			}
+		}
+
+		protected override void Uninitialize()
+		{
+			base.Uninitialize();
+			ProjectOpenedEvent.Unsubscribe(OnProjectOpened);
+			return;
+		}
+
+		#endregion Overrides
+
+	}
 }

@@ -1,6 +1,7 @@
-﻿Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MilitaryToolsForArcGISPro", "MilitaryToolsForArcGISPro.csproj", "{F13AA05B-70CC-4354-A174-E0BDE382F971}"
 EndProject
@@ -16,7 +17,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisibilityLibrary", "..\..\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProAppVisibilityModule", "..\..\..\visibility-addin-dotnet\source\addins\ProAppVisibilityModule\ProAppVisibilityModule.csproj", "{4DE1A8A8-BCA3-40C7-8929-041023F2D3E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProSymbolEditor", "..\..\..\military-symbol-editor-addin-wpf\source\ProSymbolEditor\ProSymbolEditor.csproj", "{4FF462B0-2910-47F3-B6FD-D1D17E5F7DFC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProSymbolEditor", "..\..\..\military-symbology\source\ProSymbolEditor\ProSymbolEditor.csproj", "{4FF462B0-2910-47F3-B6FD-D1D17E5F7DFC}"
+EndProject
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "military-tools-geoprocessing-toolbox", "..\..\..\military-tools-geoprocessing-toolbox\military-tools-geoprocessing-toolbox.pyproj", "{A10201F6-5A06-4328-BB56-1698D8DA4E7E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -56,6 +59,8 @@ Global
 		{4FF462B0-2910-47F3-B6FD-D1D17E5F7DFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4FF462B0-2910-47F3-B6FD-D1D17E5F7DFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4FF462B0-2910-47F3-B6FD-D1D17E5F7DFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A10201F6-5A06-4328-BB56-1698D8DA4E7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A10201F6-5A06-4328-BB56-1698D8DA4E7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
