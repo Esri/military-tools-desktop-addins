@@ -211,7 +211,7 @@
           <tooltip heading="Tooltip Heading">
             Converts source coordinates in a table to multiple coordinate formats.<disabledText /></tooltip>
         </button>
-        <button id="ProAppModuleMilitaryTools_TableTo2_PointLine_button" caption="TableTo 2 PointLine" className="ProAppModuleMilitaryTools.TableTo2_PointLine_button" loadOnClick="true" smallImage="Images\TableTo2PointLine16.png" largeImage="Images\TableTo2PointLine32.png">
+        <button id="ProAppModuleMilitaryTools_TableTo2_PointLine_button" caption="Table To 2-Point Line" className="ProAppModuleMilitaryTools.TableTo2_PointLine_button" loadOnClick="true" smallImage="Images\TableTo2PointLine16.png" largeImage="Images\TableTo2PointLine32.png">
           <tooltip heading="Tooltip Heading">
             Creates a line feature from start and end point coordinates.<disabledText /></tooltip>
         </button>
@@ -340,7 +340,7 @@
     <!-- Update the mapping module. Insert our custom button into the layers existing context menu. -->
     <updateModule refID="esri_geoprocessing_module">
       <groups>
-        <updateGroup refID="esri_geoprocessing_analysisTools">
+        <updateGroup refID="esri_geoprocessing_analysis2">
           <insertGallery refID="ProAppModuleMilitaryTools_MilitaryToolsGallery" size="large" placeWith="esri_geoprocessingGallery" insert="after" />
         </updateGroup>
       </groups>
