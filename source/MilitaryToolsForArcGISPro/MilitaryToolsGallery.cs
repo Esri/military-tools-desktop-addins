@@ -155,35 +155,6 @@ namespace ProAppModuleMilitaryTools
 				}
 			}
 		}
-		public static object TOCArgs()
-		{
-			Layer selectedLayer = null;
-			StandaloneTable SATable = null;
-			if (MapView.Active != null)
-			{
-				if (MapView.Active.GetSelectedLayers().Count() > 0)
-				{
-					selectedLayer = MapView.Active.GetSelectedLayers()[0];
-				}
-				if (MapView.Active.GetSelectedStandaloneTables().Count() > 0)
-				{
-					SATable = MapView.Active.GetSelectedStandaloneTables()[0];
-				}
-				if (SATable != null && selectedLayer != null)
-				{
-					return selectedLayer;
-				}
-				if (selectedLayer != null)
-				{
-					return selectedLayer;
-				}
-				if (SATable != null)
-				{
-					return SATable;
-				}
-			}
-			return null;
-		}
 
 		public static Boolean SpatialAnalystEnabled => LicenseInformation.IsAvailable(LicenseCodes.SpatialAnalyst);
 
@@ -215,7 +186,7 @@ namespace ProAppModuleMilitaryTools
 	{
 		protected override void OnClick()
 		{
-			var args = AddIn.TOCArgs() != null ? Geoprocessing.MakeValueArray(AddIn.TOCArgs()) : Geoprocessing.MakeValueArray();
+			var args = Geoprocessing.MakeValueArray();
 			AddIn.OpenCustomGPTool(AddIn.MTToolboxAlias, Constants.ConvertCoordinates, args);
 		}		
 	}
@@ -223,7 +194,7 @@ namespace ProAppModuleMilitaryTools
 	{
 		protected override void OnClick()
 		{
-			var args = AddIn.TOCArgs() != null ? Geoprocessing.MakeValueArray(AddIn.TOCArgs()) : Geoprocessing.MakeValueArray();
+			var args = Geoprocessing.MakeValueArray();
 			AddIn.OpenCustomGPTool(AddIn.MTToolboxAlias, Constants.TableTo2PointLine, args);
 		}
 	}
@@ -231,7 +202,7 @@ namespace ProAppModuleMilitaryTools
 	{
 		protected override void OnClick()
 		{
-			var args = AddIn.TOCArgs() != null ? Geoprocessing.MakeValueArray(AddIn.TOCArgs()) : Geoprocessing.MakeValueArray();
+			var args = Geoprocessing.MakeValueArray();
 			AddIn.OpenCustomGPTool(AddIn.MTToolboxAlias, Constants.TableToEllipse, args);
 		}
 	}
@@ -239,7 +210,7 @@ namespace ProAppModuleMilitaryTools
 	{
 		protected override void OnClick()
 		{
-			var args = AddIn.TOCArgs() != null ? Geoprocessing.MakeValueArray(AddIn.TOCArgs()) : Geoprocessing.MakeValueArray();
+			var args = Geoprocessing.MakeValueArray();
 			AddIn.OpenCustomGPTool(AddIn.MTToolboxAlias, Constants.TableToLineOfBearing, args);
 		}
 	}
@@ -247,7 +218,7 @@ namespace ProAppModuleMilitaryTools
 	{
 		protected override void OnClick()
 		{
-			var args = AddIn.TOCArgs() != null ? Geoprocessing.MakeValueArray(AddIn.TOCArgs()) : Geoprocessing.MakeValueArray();
+			var args = Geoprocessing.MakeValueArray();
 			AddIn.OpenCustomGPTool(AddIn.MTToolboxAlias, Constants.TableToPoint, args);
 		}
 	}
@@ -255,7 +226,7 @@ namespace ProAppModuleMilitaryTools
 	{
 		protected override void OnClick()
 		{
-			var args = AddIn.TOCArgs() != null ? Geoprocessing.MakeValueArray(AddIn.TOCArgs()) : Geoprocessing.MakeValueArray();
+			var args = Geoprocessing.MakeValueArray();
 			AddIn.OpenCustomGPTool(AddIn.MTToolboxAlias, Constants.TableToPolygon, args);
 		}
 	}
@@ -263,7 +234,7 @@ namespace ProAppModuleMilitaryTools
 	{
 		protected override void OnClick()
 		{
-			var args = AddIn.TOCArgs() != null ? Geoprocessing.MakeValueArray(AddIn.TOCArgs()) : Geoprocessing.MakeValueArray();
+			var args = Geoprocessing.MakeValueArray();
 			AddIn.OpenCustomGPTool(AddIn.MTToolboxAlias, Constants.TableToPolyline, args);
 		}
 	}
@@ -272,7 +243,7 @@ namespace ProAppModuleMilitaryTools
 	{
 		protected override void OnClick()
 		{
-			var args = AddIn.TOCArgs() != null ? Geoprocessing.MakeValueArray(AddIn.TOCArgs()) : Geoprocessing.MakeValueArray();
+			var args = Geoprocessing.MakeValueArray();
 			AddIn.OpenCustomGPTool(AddIn.MTToolboxAlias, Constants.RangeRingsFromInterval, args);
 		}
 	}
@@ -280,7 +251,7 @@ namespace ProAppModuleMilitaryTools
 	{
 		protected override void OnClick()
 		{
-			var args = AddIn.TOCArgs() != null ? Geoprocessing.MakeValueArray(AddIn.TOCArgs()) : Geoprocessing.MakeValueArray();
+			var args = Geoprocessing.MakeValueArray();
 			AddIn.OpenCustomGPTool(AddIn.MTToolboxAlias, Constants.RangeRingFromMinimumAndMaximum, args);
 		}
 	}
@@ -288,7 +259,7 @@ namespace ProAppModuleMilitaryTools
 	{
 		protected override void OnClick()
 		{
-			var args = AddIn.TOCArgs() != null ? Geoprocessing.MakeValueArray(AddIn.TOCArgs()) : Geoprocessing.MakeValueArray();
+			var args = Geoprocessing.MakeValueArray();
 			AddIn.OpenCustomGPTool(AddIn.MTToolboxAlias, Constants.RangeRingsFromMinAndMaxTable, args);
 		}
 	}
@@ -296,7 +267,7 @@ namespace ProAppModuleMilitaryTools
 	{
 		protected override void OnClick()
 		{
-			var args = AddIn.TOCArgs() != null ? Geoprocessing.MakeValueArray(AddIn.TOCArgs()) : Geoprocessing.MakeValueArray();
+			var args = Geoprocessing.MakeValueArray();
 			AddIn.OpenCustomGPTool(AddIn.MTToolboxAlias, Constants.CreateGRGFromArea, args);
 		}
 	}
@@ -304,7 +275,7 @@ namespace ProAppModuleMilitaryTools
 	{
 		protected override void OnClick()
 		{
-			var args = AddIn.TOCArgs() != null ? Geoprocessing.MakeValueArray(AddIn.TOCArgs()) : Geoprocessing.MakeValueArray();
+			var args = Geoprocessing.MakeValueArray();
 			AddIn.OpenCustomGPTool(AddIn.MTToolboxAlias, Constants.CreateGRGFromPoint, args);
 		}
 	}
@@ -312,7 +283,7 @@ namespace ProAppModuleMilitaryTools
 	{
 		protected override void OnClick()
 		{
-			var args = AddIn.TOCArgs() != null ? Geoprocessing.MakeValueArray(AddIn.TOCArgs()) : Geoprocessing.MakeValueArray();
+			var args = Geoprocessing.MakeValueArray();
 			AddIn.OpenCustomGPTool(AddIn.MTToolboxAlias, Constants.CreateReferenceSystemGRGFromArea, args);
 		}
 	}
@@ -320,7 +291,7 @@ namespace ProAppModuleMilitaryTools
 	{
 		protected override void OnClick()
 		{
-			var args = AddIn.TOCArgs() != null ? Geoprocessing.MakeValueArray(AddIn.TOCArgs()) : Geoprocessing.MakeValueArray();
+			var args = Geoprocessing.MakeValueArray();
 			AddIn.OpenCustomGPTool(AddIn.MTToolboxAlias, Constants.NumberFeatures, args);
 		}
 	}
@@ -328,7 +299,7 @@ namespace ProAppModuleMilitaryTools
 	{
 		protected override void OnClick()
 		{
-			var args = AddIn.TOCArgs() != null ? Geoprocessing.MakeValueArray(AddIn.TOCArgs()) : Geoprocessing.MakeValueArray();
+			var args = Geoprocessing.MakeValueArray();
 			AddIn.OpenCustomGPTool(AddIn.MTToolboxAlias, Constants.FindLocalPeaks, args);
 		}
 	}
@@ -336,7 +307,7 @@ namespace ProAppModuleMilitaryTools
 	{
 		protected override void OnClick()
 		{
-			var args = AddIn.TOCArgs() != null ? Geoprocessing.MakeValueArray(AddIn.TOCArgs()) : Geoprocessing.MakeValueArray();
+			var args = Geoprocessing.MakeValueArray();
 			AddIn.OpenCustomGPTool(AddIn.MTToolboxAlias, Constants.HighestPoints, args);
 		}
 	}
@@ -344,7 +315,7 @@ namespace ProAppModuleMilitaryTools
 	{
 		protected override void OnClick()
 		{
-			var args = AddIn.TOCArgs() != null ? Geoprocessing.MakeValueArray(AddIn.TOCArgs()) : Geoprocessing.MakeValueArray();
+			var args = Geoprocessing.MakeValueArray();
 			AddIn.OpenCustomGPTool(AddIn.MTToolboxAlias, Constants.LinearLineOfSight, args);
 		}
 	}
@@ -352,7 +323,7 @@ namespace ProAppModuleMilitaryTools
 	{
 		protected override void OnClick()
 		{
-			var args = AddIn.TOCArgs() != null ? Geoprocessing.MakeValueArray(AddIn.TOCArgs()) : Geoprocessing.MakeValueArray();
+			var args = Geoprocessing.MakeValueArray();
 			AddIn.OpenCustomGPTool(AddIn.MTToolboxAlias, Constants.LowestPoints, args);
 		}
 	}
@@ -360,7 +331,7 @@ namespace ProAppModuleMilitaryTools
 	{
 		protected override void OnClick()
 		{
-			var args = AddIn.TOCArgs() != null ? Geoprocessing.MakeValueArray(AddIn.TOCArgs()) : Geoprocessing.MakeValueArray();
+			var args = Geoprocessing.MakeValueArray();
 			AddIn.OpenCustomGPTool(AddIn.MTToolboxAlias, Constants.RadialLineOfSight, args);
 		}
 	}
@@ -368,7 +339,7 @@ namespace ProAppModuleMilitaryTools
 	{
 		protected override void OnClick()
 		{
-			var args = AddIn.TOCArgs() != null ? Geoprocessing.MakeValueArray(AddIn.TOCArgs()) : Geoprocessing.MakeValueArray();
+			var args = Geoprocessing.MakeValueArray();
 			AddIn.OpenCustomGPTool(AddIn.MTToolboxAlias, Constants.RadialLineOfSightAndRange, args);
 		}
 	}
