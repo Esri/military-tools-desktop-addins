@@ -59,6 +59,7 @@
   <ItemGroup>
     <Reference Include="ArcGIS.Desktop.GeoProcessing">
       <HintPath>..\..\..\..\..\..\..\Program Files\ArcGIS\Pro\bin\Extensions\GeoProcessing\ArcGIS.Desktop.GeoProcessing.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="ArcGIS.Desktop.Ribbon.Wpf">
       <HintPath>..\..\..\..\..\Program Files\ArcGIS\Pro\bin\ArcGIS.Desktop.Ribbon.Wpf.dll</HintPath>
