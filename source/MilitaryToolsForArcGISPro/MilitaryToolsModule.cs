@@ -51,7 +51,7 @@ namespace ProAppModuleMilitaryTools
 		protected override bool Initialize()
 		{
 			ProjectOpenedEvent.Subscribe(OnProjectOpened);
-            //ProjectOpenedAsyncEvent.Subscribe(OnProjectOpenedAsync);
+            ProjectOpenedAsyncEvent.Subscribe(OnProjectOpenedAsync);
             return base.Initialize();
 		}
 
@@ -63,7 +63,13 @@ namespace ProAppModuleMilitaryTools
 		private async Task OnProjectOpenedAsync(ProjectEventArgs args)
 		{
 			var tools = await SearchTools.SearchAsync(Constants.RadialLineOfSightAndRange);
-			string searchResult = tools.ElementAt(0).ToString();
+            if ((tools == null) || tools.Count() == 0)
+            {
+                AddIn.SystemToolsAvailable = false;
+                return;
+            }
+
+            string searchResult = tools.ElementAt(0).ToString();
 			if (searchResult.Contains(Constants.RadialLineOfSightAndRange))
 			{
 				AddIn.SystemToolsAvailable = true;
