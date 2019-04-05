@@ -49,7 +49,7 @@ Military Tools for ArcGIS is a collection of mission-focused enhancements to sim
 
 #### Obtain the Dependent Repositories
 
-* Clone this repository
+* Clone this repo
 * Clone each of the following component repositories *to the same folder location* 
 	* [coordinate-conversion-addin-dotnet](https://github.com/Esri/coordinate-conversion-addin-dotnet)
 	* [distance-direction-addin-dotnet](https://github.com/Esri/distance-direction-addin-dotnet)
