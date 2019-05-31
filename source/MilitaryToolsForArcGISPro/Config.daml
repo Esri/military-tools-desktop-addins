@@ -1,5 +1,5 @@
 <ArcGIS defaultAssembly="MilitaryToolsForArcGISPro.dll" defaultNamespace="" xmlns="http://schemas.esri.com/DADF/Registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.esri.com/DADF/Registry file:///C:/Program%20Files/ArcGIS/Pro/bin/ArcGIS.Desktop.Framework.xsd">
-  <AddInInfo id="{bea7f059-c69e-4e17-84bd-072236629c0c}" version="4.0.0.0" desktopVersion="2.1">
+  <AddInInfo id="{bea7f059-c69e-4e17-84bd-072236629c0c}" version="4.0.0.0" desktopVersion="2.2">
     <Name>Military Tools for ArcGIS Pro</Name>
     <Description>Military Tools for ArcGIS Pro is a collection of tools for coordinate conversion, distance and direction calculations, visibility analysis, and the creation of military symbols.</Description>
     <Image>Images\AddinDesktop32.png</Image>
