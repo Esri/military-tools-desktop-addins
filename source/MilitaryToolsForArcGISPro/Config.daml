@@ -179,7 +179,7 @@
       <controls>
         <!-- add your controls here -->
         <button id="ProSymbolEditor_MilitarySymbolDockpane_ShowButton" caption="Military Symbol Editor" assembly="MilitarySymbolEditor.dll" className="ProSymbolEditor.MilitarySymbolDockpane_ShowButton" loadOnClick="true" smallImage="Images\MIL-16x16.png" largeImage="Images\MIL-32x32.png">
-          <tooltip heading="Military Symbol Editor">Create military overlays using MIL-STD-2525D and MIL-STD-2525B Change 2.<disabledText /></tooltip>
+          <tooltip heading="Military Symbol Editor">Create military overlays using MIL-STD-2525 and APP-6.<disabledText /></tooltip>
         </button>
         <!--<button id="ProSymbolEditor_MilitarySymbolDockpane_MenuButton" caption="Burger Menu Button" className="MilitarySymbolDockpane_MenuButton" loadOnClick="true" smallImage="Images\GenericButtonPurple16.png" largeImage="Images\GenericButtonPurple32.png">
           <tooltip heading="Burger Menu Button">ToolTip<disabledText /></tooltip>
