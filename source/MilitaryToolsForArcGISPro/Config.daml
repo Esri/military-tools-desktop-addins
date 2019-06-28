@@ -1,11 +1,11 @@
 <ArcGIS defaultAssembly="MilitaryToolsForArcGISPro.dll" defaultNamespace="" xmlns="http://schemas.esri.com/DADF/Registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.esri.com/DADF/Registry file:///C:/Program%20Files/ArcGIS/Pro/bin/ArcGIS.Desktop.Framework.xsd">
-  <AddInInfo id="{bea7f059-c69e-4e17-84bd-072236629c0c}" version="4.0.0.0" desktopVersion="2.1">
+  <AddInInfo id="{bea7f059-c69e-4e17-84bd-072236629c0c}" version="4.0.0.0" desktopVersion="2.2">
     <Name>Military Tools for ArcGIS Pro</Name>
     <Description>Military Tools for ArcGIS Pro is a collection of tools for coordinate conversion, distance and direction calculations, visibility analysis, and the creation of military symbols.</Description>
     <Image>Images\AddinDesktop32.png</Image>
     <Author>Esri</Author>
     <Company>Esri</Company>
-    <Date>6/26/2018</Date>
+    <Date>5/21/2019</Date>
     <Subject>Framework</Subject>
     <!-- Note subject can be one or more of these topics:
                     Content, Framework, Editing, Geodatabase, Geometry, Geoprocessing, Layouts, Map Authoring, Map Exploration -->
@@ -179,7 +179,7 @@
       <controls>
         <!-- add your controls here -->
         <button id="ProSymbolEditor_MilitarySymbolDockpane_ShowButton" caption="Military Symbol Editor" assembly="MilitarySymbolEditor.dll" className="ProSymbolEditor.MilitarySymbolDockpane_ShowButton" loadOnClick="true" smallImage="Images\MIL-16x16.png" largeImage="Images\MIL-32x32.png">
-          <tooltip heading="Military Symbol Editor">Create military overlays using MIL-STD-2525D and MIL-STD-2525B Change 2.<disabledText /></tooltip>
+          <tooltip heading="Military Symbol Editor">Create military overlays using MIL-STD-2525 and APP-6.<disabledText /></tooltip>
         </button>
         <!--<button id="ProSymbolEditor_MilitarySymbolDockpane_MenuButton" caption="Burger Menu Button" className="MilitarySymbolDockpane_MenuButton" loadOnClick="true" smallImage="Images\GenericButtonPurple16.png" largeImage="Images\GenericButtonPurple32.png">
           <tooltip heading="Burger Menu Button">ToolTip<disabledText /></tooltip>
@@ -324,27 +324,32 @@
           <button refID="ProSymbolEditor_MilitarySymbolDockpane_ShowButton" />
           <button refID="ProAppVisibilityModule_VisibilityDockpane_ShowButton" />
         </group>
+        <group id="ProAppMilitaryTools_Group5" caption="Geoprocessing" keytip="MTBGP">
+          <gallery refID="ProAppModuleMilitaryTools_MilitaryToolsGallery" inline="false" size="large" />
+        </group>
       </groups>
       <tabs>
         <tab id="ProAppMilitaryTools_Tab0" caption="Military Tools" keytip="P">
           <group refID="ProAppMilitaryTools_Group4" />
+          <group refID="ProAppMilitaryTools_Group5" />
         </tab>
       </tabs>
       <galleries>
         <gallery id="ProAppModuleMilitaryTools_MilitaryToolsGallery" caption="Military Tools" className="ProAppModuleMilitaryTools.MilitaryToolsGallery" itemsInRow="1" itemWidth="340" resizable="false" loadingMessage="Loading..." showGroup="true" showItemCaption="true" disableIfBusy="false" dataTemplateFile="pack://application:,,,/MilitaryToolsForArcGISPro;component//MilitaryToolsGalleryItemTemplate.xaml" templateID="MilitaryToolsGalleryItemTemplate" largeImage="Images\MilitaryWorkflows32.png" keytip="MT">
-          <tooltip heading="Military Tools">
-            A series of tools for Military Analysis<disabledText /></tooltip>
+          <tooltip heading="Military Tools Geoprocessing">
+            A series of GP tools for Military Analysis<disabledText /></tooltip>
         </gallery>
       </galleries>
     </insertModule>
     <!-- Update the mapping module. Insert our custom button into the layers existing context menu. -->
-    <updateModule refID="esri_geoprocessing_module">
+    <!-- This was moved to the Military Tools Tab, leaving section here in case it should remain on Analysis -->
+    <!--<updateModule refID="esri_geoprocessing_module">
       <groups>
         <updateGroup refID="esri_geoprocessing_analysis2">
           <insertGallery refID="ProAppModuleMilitaryTools_MilitaryToolsGallery" size="large" placeWith="esri_geoprocessingGallery" insert="after" />
         </updateGroup>
       </groups>
-    </updateModule>
+    </updateModule>-->
     <updateModule refID="esri_mapping">
       <menus>
         <updateMenu refID="esri_mapping_selection2DContextMenu">

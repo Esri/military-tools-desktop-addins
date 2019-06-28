@@ -304,6 +304,7 @@
   -->
   <Target Name="BeforeBuild">
     <Error Text="C:\Program Files\ArcGIS\Pro\bin\Esri.ProApp.SDK.Desktop.targets not found." Condition="!Exists('C:\Program Files\ArcGIS\Pro\bin\Esri.ProApp.SDK.Desktop.targets')" />
+    <Error Text="military-tools-geoprocessing-toolbox folder not found." Condition="!Exists('$(SolutionDir)/../../../military-tools-geoprocessing-toolbox')" />
     <XmlPeek XmlInputPath="Config.daml" Query="//@version[1]">
       <Output TaskParameter="Result" ItemName="Peeked" />
     </XmlPeek>

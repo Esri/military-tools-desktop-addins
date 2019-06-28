@@ -2,7 +2,7 @@
 
 Military Tools for ArcGIS is a collection of mission-focused enhancements to simplify defense and intelligence workflows in ArcGIS. The Military Tools for ArcGIS Desktop add-ins repository combines several related mission-focused ArcGIS add-ins for defense and intelligence (see [Resources](#resources) section) as a single installable add-in toolbar for ArcMap and ArcGIS Pro.
 
-![screenshot of toolbar](Screenshot.png)
+![screenshot of toolbar](militarytools.png)
 
 ## Features
 
@@ -11,8 +11,8 @@ Military Tools for ArcGIS is a collection of mission-focused enhancements to sim
 	* [Distance and Direction](https://github.com/Esri/distance-direction-addin-dotnet)
 	* [Military Symbol Editor](https://github.com/Esri/military-symbology) (ArcGIS Pro Only)
 	* [Visibility](https://github.com/Esri/visibility-addin-dotnet)
-* Addin for ArcMap 10.3.1+
-* Addin for ArcGIS Pro 2.1+ 
+* Addin for ArcMap 10.4.1+
+* Addin for ArcGIS Pro 2.2+ 
 
 ## Sections
 
@@ -28,20 +28,20 @@ Military Tools for ArcGIS is a collection of mission-focused enhancements to sim
 ### Build Requirements 
 
 * Visual Studio 2015
-    * Important Note: Visual Studio 2013 is required if building on ArcGIS 10.3.1
+    * Important Note: Visual Studio 2013 [may also be required if building on ArcGIS 10.4.1-10.5.1](https://support.esri.com/en/technical-article/000012659)
     * If you wish to load and view the Python project file `military-tools-geoprocessing-toolbox.pyproj` you should install the Python Tools for Visual Studio (PTVS) Extension when prompted. This project or extension is not required to build the addins.
 * ArcGIS for Desktop 
-	* ArcMap 10.3.1+
-	* ArcGIS Pro 2.1+
-* ArcGIS Desktop SDK for .NET 10.3.1+
+	* ArcMap 10.4.1+
+	* ArcGIS Pro 2.2+
+* ArcGIS Desktop SDK for .NET 10.4.1+
 	* [ArcGIS Desktop for .NET Requirements](https://desktop.arcgis.com/en/desktop/latest/get-started/system-requirements/arcobjects-sdk-system-requirements.htm)
-* [ArcGIS Pro SDK](http://pro.arcgis.com/en/pro-app/sdk/) 2.1+
+* [ArcGIS Pro SDK](http://pro.arcgis.com/en/pro-app/sdk/) 2.2+
 
 ### Run Requirements
 
 * ArcGIS for Desktop 
-	* ArcMap 10.3.1+
-	* ArcGIS Pro 2.1+
+	* ArcMap 10.4.1+
+	* ArcGIS Pro 2.2+
 
 ## Instructions
 
