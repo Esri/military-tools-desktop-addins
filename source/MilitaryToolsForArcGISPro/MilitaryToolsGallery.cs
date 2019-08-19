@@ -138,7 +138,7 @@ namespace ProAppModuleMilitaryTools
 	{
 		public static string AssemblyInstallPath => Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
 		public static string MTToolboxAlias => "mt";
-		public static string MTToolboxPath => Path.Combine(AssemblyInstallPath, "toolboxes", "MilitaryTools.pyt");
+		public static string MTToolboxPath => Path.Combine(AssemblyInstallPath, @"Toolboxes\toolboxes", "MilitaryTools.pyt");
 		public static void OpenCustomGPTool(string systoolboxalias, string systoolalias, IEnumerable<string> args)
 		{
 			if (AddIn.SystemToolsAvailable)
