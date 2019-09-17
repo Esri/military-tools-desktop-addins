@@ -129,10 +129,16 @@
     <AddInContent Include="Images\GenericButtonRed32.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="..\..\..\military-tools-geoprocessing-toolbox\tools\militarytools\esri\toolboxes\**\*.*">
-      <Link>toolboxes\%(RecursiveDir)%(Filename)%(Extension)</Link>
+    <!-- For 2.2/2.3 Only (Can be removed when no longer needed) -->
+    <None Include="..\..\..\military-tools-geoprocessing-toolbox\tools\militarytools\esri\toolboxes\**\*.*">
+      <Link>Toolboxes\toolboxes\%(RecursiveDir)%(Filename)%(Extension)</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    </None>  
+    <!-- For 2.4 and later -->    
+    <AddInContent Include="..\..\..\military-tools-geoprocessing-toolbox\tools\militarytools\esri\toolboxes\**\*.*">
+      <Link>Toolboxes\toolboxes\%(RecursiveDir)%(Filename)%(Extension)</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </AddInContent>
     <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
