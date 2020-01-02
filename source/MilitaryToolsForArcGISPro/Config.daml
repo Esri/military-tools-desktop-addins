@@ -352,14 +352,16 @@
     </updateModule>-->
     <updateModule refID="esri_mapping">
       <menus>
-        <updateMenu refID="esri_mapping_selection2DContextMenu">
-          <insertMenu refID="ProAppCoordConversionModule_ContextCopyMenu" separator="true" />
-        </updateMenu>
         <!-- NOTE: This context menu "Convert Coordinates" was added for Pro 2.2 to the mapping pop-up 
          so the custom one below has been removed from this pop-up -->
-        <!--<updateMenu refID="esri_mapping_popupToolContextMenu">
+        <!--
+         <updateMenu refID="esri_mapping_selection2DContextMenu">
           <insertMenu refID="ProAppCoordConversionModule_ContextCopyMenu" separator="true" />
-        </updateMenu>-->
+         </updateMenu>
+         <updateMenu refID="esri_mapping_popupToolContextMenu">
+          <insertMenu refID="ProAppCoordConversionModule_ContextCopyMenu" separator="true" />
+         </updateMenu>
+        -->
       </menus>
     </updateModule>
   </modules>
