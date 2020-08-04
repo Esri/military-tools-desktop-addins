@@ -1,4 +1,6 @@
 # military-tools-desktop-addins
+___Beginning at ArcGIS Pro 2.6 this functionality is installed with ArcGIS Pro. This repository will only be updated with critical fixes to ArcGIS Desktop.___
+
 
 Military Tools for ArcGIS is a collection of mission-focused enhancements to simplify defense and intelligence workflows in ArcGIS. The Military Tools for ArcGIS Desktop add-ins repository combines several related mission-focused ArcGIS add-ins for defense and intelligence (see [Resources](#resources) section) as a single installable add-in toolbar for ArcMap and ArcGIS Pro.
 
