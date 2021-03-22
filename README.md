@@ -42,8 +42,8 @@ Military Tools for ArcGIS is a collection of mission-focused enhancements to sim
 ### Run Requirements
 
 * ArcGIS for Desktop 
-	* ArcMap 10.4.1+
-	* ArcGIS Pro 2.2+
+	* ArcMap 10.4.1+ (Advanced)
+	* ArcGIS Pro 2.2+ (Advanced)
 
 ## Instructions
 
